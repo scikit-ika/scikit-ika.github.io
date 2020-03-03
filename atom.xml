@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>scikit-ika</title>
+  
+  <subtitle>A real-time adaptive predictive system for evolving data streams.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://scikit-ika.github.io/"/>
+  <updated>2020-03-03T19:07:09.967Z</updated>
+  <id>https://scikit-ika.github.io/</id>
+  
+  <author>
+    <name>Team scikit-ika</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hoeffding tree with memory management is intergrated</title>
+    <link href="https://scikit-ika.github.io/news/2020/04/15/hoeffding-tree/"/>
+    <id>https://scikit-ika.github.io/news/2020/04/15/hoeffding-tree/</id>
+    <published>2020-04-15T00:00:00.000Z</published>
+    <updated>2020-03-03T19:07:09.967Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AutoML is integrated</title>
+    <link href="https://scikit-ika.github.io/news/2020/03/30/AutoML-is-integrated/"/>
+    <id>https://scikit-ika.github.io/news/2020/03/30/AutoML-is-integrated/</id>
+    <published>2020-03-30T00:00:00.000Z</published>
+    <updated>2020-03-03T19:07:09.967Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PEARL is intergrated</title>
+    <link href="https://scikit-ika.github.io/news/2020/01/29/pearl-is-intergrated/"/>
+    <id>https://scikit-ika.github.io/news/2020/01/29/pearl-is-intergrated/</id>
+    <published>2020-01-29T00:00:00.000Z</published>
+    <updated>2020-03-03T19:07:09.967Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>scikit-ika is born</title>
+    <link href="https://scikit-ika.github.io/news/2019/12/22/scikit-ika-is-born/"/>
+    <id>https://scikit-ika.github.io/news/2019/12/22/scikit-ika-is-born/</id>
+    <published>2019-12-22T00:00:00.000Z</published>
+    <updated>2020-03-03T19:07:09.967Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
