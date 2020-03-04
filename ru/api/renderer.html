@@ -120,28 +120,93 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Рендер</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/ru/api/renderer.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Предложить улучшение"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p>Рендер используется для создания содержимого.</p>
+<h2 id="Краткий-обзор" class="article-heading"><a href="#Краткий-обзор" class="headerlink" title="Краткий обзор"></a>Краткий обзор<a class="article-anchor" href="#Краткий-обзор" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.extend.renderer.register(name, output, <span class="function"><span class="keyword">function</span>(<span class="params">data, options</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;, sync);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Аргумент</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>name</code></td>
+<td>Вводится расширение входного файла (нижний регистр, без ведущей <code>.</code>)</td>
+</tr>
+<tr>
+<td><code>output</code></td>
+<td>Выводится расширение входного файла (нижний регистр, без ведущей <code>.</code>)</td>
+</tr>
+<tr>
+<td><code>sync</code></td>
+<td>Режим синхронизации</td>
+</tr>
+</tbody></table>
+<p>В функцию рендера передаются два аргумента:</p>
+<table>
+<thead>
+<tr>
+<th>Аргумент</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>data</code></td>
+<td>Включает два атрибута: путь к файлу <code>path</code> и содержимое файла  <code>text</code>. Переменная <code>path</code> не является обязательной.</td>
+</tr>
+<tr>
+<td><code>option</code></td>
+<td>Опции</td>
+</tr>
+</tbody></table>
+<h2 id="Пример" class="article-heading"><a href="#Пример" class="headerlink" title="Пример"></a>Пример<a class="article-anchor" href="#Пример" aria-hidden="true"></a></h2><h3 id="Асинхронный-режим" class="article-heading"><a href="#Асинхронный-режим" class="headerlink" title="Асинхронный режим"></a>Асинхронный режим<a class="article-anchor" href="#Асинхронный-режим" aria-hidden="true"></a></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> stylus = <span class="built_in">require</span>(<span class="string">'stylus'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Обратный вызов</span></span><br><span class="line">hexo.extend.renderer.register(<span class="string">'styl'</span>, <span class="string">'css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data, options, callback</span>)</span>&#123;</span><br><span class="line">  stylus(data.text).set(<span class="string">'filename'</span>, data.path).render(callback);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Запрос</span></span><br><span class="line">hexo.extend.renderer.register(<span class="string">'styl'</span>, <span class="string">'css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data, options</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">    resolve(<span class="string">'test'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Синхронный-режим" class="article-heading"><a href="#Синхронный-режим" class="headerlink" title="Синхронный режим"></a>Синхронный режим<a class="article-anchor" href="#Синхронный-режим" aria-hidden="true"></a></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ejs = <span class="built_in">require</span>(<span class="string">'ejs'</span>);</span><br><span class="line"></span><br><span class="line">hexo.extend.renderer.register(<span class="string">'ejs'</span>, <span class="string">'html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data, options</span>)</span>&#123;</span><br><span class="line">  options.filename = data.path;</span><br><span class="line">  <span class="keyword">return</span> ejs.render(data.text, options);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.991Z" itemprop="dateModified">Последнее обновление: 2020-03-03</time>
+                <a href="processor.html" class="article-footer-prev" title="Обработчик"><i class="fa fa-chevron-left"></i><span>Пред</span></a><a href="tag.html" class="article-footer-next" title="Тег"><span>След</span><i class="fa fa-chevron-right"></i></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/ru/api/renderer.html';
+  var disqus_title = "Рендер";
+  var disqus_config = function(){
+    this.language = 'ru';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Содержание</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%B8%D0%B9-%D0%BE%D0%B1%D0%B7%D0%BE%D1%80"><span class="toc-text">Краткий обзор</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80"><span class="toc-text">Пример</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%90%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC"><span class="toc-text">Асинхронный режим</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%A1%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC"><span class="toc-text">Синхронный режим</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Наверх</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Ядро</strong><a href="index.html" class="sidebar-link">Обзор</a><a href="events.html" class="sidebar-link">События</a><a href="locals.html" class="sidebar-link">Переменные</a><a href="router.html" class="sidebar-link">Маршруты</a><a href="box.html" class="sidebar-link">Модуль</a><a href="rendering.html" class="sidebar-link">Рендеринг</a><a href="posts.html" class="sidebar-link">Посты</a><a href="scaffolds.html" class="sidebar-link">Заготовки</a><a href="themes.html" class="sidebar-link">Темы</a><strong class="sidebar-title">Расширения</strong><a href="console.html" class="sidebar-link">Консоль</a><a href="deployer.html" class="sidebar-link">Инструмент размещения</a><a href="filter.html" class="sidebar-link">Фильтр</a><a href="generator.html" class="sidebar-link">Генератор</a><a href="helper.html" class="sidebar-link">Помошник</a><a href="migrator.html" class="sidebar-link">Мигратор</a><a href="processor.html" class="sidebar-link">Обработчик</a><a href="renderer.html" class="sidebar-link current">Рендер</a><a href="tag.html" class="sidebar-link">Тег</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

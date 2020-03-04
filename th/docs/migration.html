@@ -120,28 +120,78 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Migration</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/th/docs/migration.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <h2 id="RSS" class="article-heading"><a href="#RSS" class="headerlink" title="RSS"></a>RSS<a class="article-anchor" href="#RSS" aria-hidden="true"></a></h2><p>ขั้นแรก ติดตั้งปลั๊กอิน <code>hexo-migrator-rss</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-migrator-rss --save</span><br></pre></td></tr></table></figure>
+
+<p>เมื่อเสร็จการติดตั้งปลั๊กอินแล้วรันคำสั่งต่อไปเพื่อย้ายโพสต์ทั้งหมดจาก RSS<br> <code>source</code> นั้นเป็น path ของไฟล์หรือ URL ได้</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo migrate rss &lt;<span class="built_in">source</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Jekyll" class="article-heading"><a href="#Jekyll" class="headerlink" title="Jekyll"></a>Jekyll<a class="article-anchor" href="#Jekyll" aria-hidden="true"></a></h2><p>ย้ายไฟล์ทั้งหมดใน folder Jekyll  <code>_posts</code> ไป folder  <code>source/_posts</code><br>แก้ไขการตั้งค่า <code>new_post_name</code> ใน <code>_config.yml</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Octopress" class="article-heading"><a href="#Octopress" class="headerlink" title="Octopress"></a>Octopress<a class="article-anchor" href="#Octopress" aria-hidden="true"></a></h2><p>ย้ายไฟล์ทั้งหมดใน folder <code>source/_posts</code> ของ Octopress ไปถึง  <code>source/_posts</code><br>แก้ไขการตั้งค่า <code>new_post_name</code> ใน <code>_config.yml</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="WordPress" class="article-heading"><a href="#WordPress" class="headerlink" title="WordPress"></a>WordPress<a class="article-anchor" href="#WordPress" aria-hidden="true"></a></h2><p>ขั้นแรก ติดตั้งปลั๊กอิน <code>hexo-migrator-wordpress</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-migrator-wordpress --save</span><br></pre></td></tr></table></figure>
+
+<p>นำไซตื WordPress ของคุณออกไปได้ด้วยการตั้งค่า “Tools” → “Export” →<br>“WordPress”  ใน dashboard ของ WordPress (สำหรับข้อมูลเพิ่มเติมไปดูที่ <a target="_blank" href="http://en.support.wordpress.com/export/" rel="external nofollow noreferrer noopener">WordPress support page</a>)</p>
+<p>แล้วรัน:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo migrate wordpress &lt;<span class="built_in">source</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>source</code>  เป็น  path ของไฟล์หรือ URL ของไฟล์ท่ี  WordPress ท่ีส่งออกมา</p>
+<h2 id="Joomla" class="article-heading"><a href="#Joomla" class="headerlink" title="Joomla"></a>Joomla<a class="article-anchor" href="#Joomla" aria-hidden="true"></a></h2><p>ขั้นแรก ติดตั้งปลั๊กอิน <code>hexo-migrator-joomla</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-migrator-joomla --save</span><br></pre></td></tr></table></figure>
+
+<p>นำออกบทความ Joomla ของคุณได้โดยใช้ component  <a target="_blank" href="http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D" rel="external nofollow noreferrer noopener">J2XML</a></p>
+<p>แล้วรัน:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo migrate joomla &lt;<span class="built_in">source</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>source</code>  เป็น  path ของไฟล์หรือ URL ของไฟล์ท่ี  Joomla ท่ีส่งออกมา</p>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.999Z" itemprop="dateModified">Last updated: 2020-03-03</time>
+                <a href="commands.html" class="article-footer-prev" title="Commands"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="writing.html" class="article-footer-next" title="Writing"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/th/docs/migration.html';
+  var disqus_title = "Migration";
+  var disqus_config = function(){
+    this.language = 'th';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RSS"><span class="toc-text">RSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jekyll"><span class="toc-text">Jekyll</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Octopress"><span class="toc-text">Octopress</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WordPress"><span class="toc-text">WordPress</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Joomla"><span class="toc-text">Joomla</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link current">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

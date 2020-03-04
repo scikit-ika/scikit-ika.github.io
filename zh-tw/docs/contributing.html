@@ -120,28 +120,111 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">貢獻</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/zh-tw/docs/contributing.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改善這篇文件"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p>We welcome you to join the development of Hexo. 🤗</p>
+<h2 id="開發" class="article-heading"><a href="#開發" class="headerlink" title="開發"></a>開發<a class="article-anchor" href="#開發" aria-hidden="true"></a></h2><p>我們非常歡迎您加入 Hexo 的開發，這份文件將幫助您了解開發流程。</p>
+<h3 id="開始之前" class="article-heading"><a href="#開始之前" class="headerlink" title="開始之前"></a>開始之前<a class="article-anchor" href="#開始之前" aria-hidden="true"></a></h3><p>請遵守以下準則：</p>
+<ul>
+<li>遵守 <a target="_blank" href="https://google.github.io/styleguide/jsguide.html" rel="external nofollow noreferrer noopener">Google JavaScript 代碼風格</a>。</li>
+<li>使用 2 個空格縮排。</li>
+<li>不要把逗號放在最前面。</li>
+</ul>
+<h3 id="工作流程" class="article-heading"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程<a class="article-anchor" href="#工作流程" aria-hidden="true"></a></h3><ol>
+<li><p>Fork <a target="_blank" href="https://github.com/hexojs/hexo" rel="external nofollow noreferrer noopener">hexojs/hexo</a></p>
+</li>
+<li><p>把檔案庫（repository）複製到電腦上，並安裝相依套件。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;hexo.git</span><br><span class="line">$ cd hexo</span><br><span class="line">$ npm install</span><br><span class="line">$ git submodule update --init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增一個功能分支。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>開始開發。</p>
+</li>
+<li><p>推送（push）分支。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立一個新的合併申請（pull request）並描述變更。</p>
+</li>
+</ol>
+<h3 id="注意事項" class="article-heading"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項<a class="article-anchor" href="#注意事項" aria-hidden="true"></a></h3><ul>
+<li><p>不要修改 <code>package.json</code> 的版本號。</p>
+</li>
+<li><p>只有在測試通過的情況下您的合併申請才會被核准，在提交前別忘了進行測試。</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm test</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Updating-official-plugins" class="article-heading"><a href="#Updating-official-plugins" class="headerlink" title="Updating official-plugins"></a>Updating official-plugins<a class="article-anchor" href="#Updating-official-plugins" aria-hidden="true"></a></h2><p>Also, we welcome PR or issue to <a target="_blank" href="https://github.com/hexojs" rel="external nofollow noreferrer noopener">official-plugins</a>. 🤗</p>
+<h2 id="更新文件" class="article-heading"><a href="#更新文件" class="headerlink" title="更新文件"></a>更新文件<a class="article-anchor" href="#更新文件" aria-hidden="true"></a></h2><p>Hexo 文件開放原始碼，您可以在 <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a> 找到原始碼。</p>
+<h3 id="工作流程-1" class="article-heading"><a href="#工作流程-1" class="headerlink" title="工作流程"></a>工作流程<a class="article-anchor" href="#工作流程-1" aria-hidden="true"></a></h3><ol>
+<li><p>Fork <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a></p>
+</li>
+<li><p>把檔案庫（repository）複製到電腦上，並安裝相依套件。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;site.git</span><br><span class="line">$ cd site</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>開始編輯文件，您可透過伺服器預覽變更。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>推送（push）分支。</p>
+</li>
+<li><p>建立一個新的合併申請（pull request）並描述變更。</p>
+</li>
+</ol>
+<h3 id="翻譯" class="article-heading"><a href="#翻譯" class="headerlink" title="翻譯"></a>翻譯<a class="article-anchor" href="#翻譯" aria-hidden="true"></a></h3><ol>
+<li>在 <code>source</code> 資料夾中建立一個新的語言資料夾（全小寫）。</li>
+<li>把 <code>source</code> 資料夾中相關的檔案（Markdown 和模板檔案）複製到新的語言資料夾中。</li>
+<li>在 <code>source/_data/language.yml</code> 中新增語言。</li>
+<li>在 <code>themes/navy/languages</code> 複製 <code>en.yml</code> 並命名為語言名稱（全小寫）。</li>
+</ol>
+<h2 id="回報問題" class="article-heading"><a href="#回報問題" class="headerlink" title="回報問題"></a>回報問題<a class="article-anchor" href="#回報問題" aria-hidden="true"></a></h2><p>當您使用 Hexo 遭遇問題時，可試著在 <a href="troubleshooting.html">解決問題</a> 中尋找解答，或是在 <a target="_blank" href="https://github.com/hexojs/hexo/issues" rel="external nofollow noreferrer noopener">GitHub</a> 或 <a target="_blank" href="https://groups.google.com/group/hexo" rel="external nofollow noreferrer noopener">Google Group</a> 詢問。若找不到答案，請至 GitHub 回報。</p>
+<ol>
+<li>以 <a href="commands.html#除錯模式">除錯模式</a> 再執行一次。</li>
+<li>執行 <code>hexo vesion</code> 並檢查版本資訊。</li>
+<li>把除錯資訊和版本資訊都貼到 GitHub。</li>
+</ol>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:10.247Z" itemprop="dateModified">上次更新：2020-03-03</time>
+                <a href="troubleshooting.html" class="article-footer-prev" title="解決問題"><i class="fa fa-chevron-left"></i><span>上一頁</span></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/zh-tw/docs/contributing.html';
+  var disqus_title = "貢獻";
+  var disqus_config = function(){
+    this.language = 'zh_TW';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">目錄</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%96%8B%E7%99%BC"><span class="toc-text">開發</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%96%8B%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="toc-text">開始之前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85"><span class="toc-text">注意事項</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Updating-official-plugins"><span class="toc-text">Updating official-plugins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%96%87%E4%BB%B6"><span class="toc-text">更新文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B-1"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E8%AD%AF"><span class="toc-text">翻譯</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E5%A0%B1%E5%95%8F%E9%A1%8C"><span class="toc-text">回報問題</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到頁首</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">開始使用</strong><a href="index.html" class="sidebar-link">概覽</a><a href="setup.html" class="sidebar-link">建立</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">指令</a><a href="migration.html" class="sidebar-link">轉移</a><strong class="sidebar-title">基本操作</strong><a href="writing.html" class="sidebar-link">寫作</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">標籤外掛</a><a href="asset-folders.html" class="sidebar-link">資產資料夾</a><a href="data-files.html" class="sidebar-link">資料檔案</a><a href="server.html" class="sidebar-link">伺服器</a><a href="generating.html" class="sidebar-link">產生檔案</a><strong class="sidebar-title">佈署</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">自定</strong><a href="permalinks.html" class="sidebar-link">永久連結</a><a href="themes.html" class="sidebar-link">主題</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">變數</a><a href="helpers.html" class="sidebar-link">輔助函數</a><a href="internationalization.html" class="sidebar-link">國際化 (i18n)</a><a href="plugins.html" class="sidebar-link">外掛</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">解決問題</a><a href="contributing.html" class="sidebar-link current">貢獻</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

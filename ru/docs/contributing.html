@@ -120,28 +120,111 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Содействие</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/ru/docs/contributing.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Предложить улучшение"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p>Добро пожаловать в команду разработчиков Hexo. 🤗</p>
+<h2 id="Разработчикам" class="article-heading"><a href="#Разработчикам" class="headerlink" title="Разработчикам"></a>Разработчикам<a class="article-anchor" href="#Разработчикам" aria-hidden="true"></a></h2><p>Мы рады желающим присоединиться к развитию Hexo. Этот документ поможет вам начать.</p>
+<h3 id="Прежде-чем-начать" class="article-heading"><a href="#Прежде-чем-начать" class="headerlink" title="Прежде, чем начать"></a>Прежде, чем начать<a class="article-anchor" href="#Прежде-чем-начать" aria-hidden="true"></a></h3><p>Пожалуйста, следите за стилем написания кода:</p>
+<ul>
+<li>Следуйте <a target="_blank" href="https://google.github.io/styleguide/jsguide.html" rel="external nofollow noreferrer noopener">Google JavaScript Style Guide</a>.</li>
+<li>Используйте мягкие табы с двойным пробелом.</li>
+<li>Не ставьте запятую в начале.</li>
+</ul>
+<h3 id="Рабочее-пространство" class="article-heading"><a href="#Рабочее-пространство" class="headerlink" title="Рабочее пространство"></a>Рабочее пространство<a class="article-anchor" href="#Рабочее-пространство" aria-hidden="true"></a></h3><ol>
+<li><p>Создайте форк <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a></p>
+</li>
+<li><p>Клонируйте репозиторий на компьютер и установите все зависимости.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;hexo.git</span><br><span class="line">$ cd hexo</span><br><span class="line">$ npm install</span><br><span class="line">$ git submodule update --init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Создать отдельную ветку.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Вносите изменения.</p>
+</li>
+<li><p>Выгрузите ветку:</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Запросите принятие изменений с их описанием.</p>
+</li>
+</ol>
+<h3 id="На-заметку" class="article-heading"><a href="#На-заметку" class="headerlink" title="На заметку"></a>На заметку<a class="article-anchor" href="#На-заметку" aria-hidden="true"></a></h3><ul>
+<li><p>Не изменяйте номер версии в <code>package.json</code>.</p>
+</li>
+<li><p>Ваш запрос могут только принять, когда все тесты пройдут. Не забудьте провести испытания перед отправкой.</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm test</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Обновление-официальных-плагинов" class="article-heading"><a href="#Обновление-официальных-плагинов" class="headerlink" title="Обновление официальных плагинов"></a>Обновление официальных плагинов<a class="article-anchor" href="#Обновление-официальных-плагинов" aria-hidden="true"></a></h2><p>Также мы будем рады PR или задачам на странице <a target="_blank" href="https://github.com/hexojs" rel="external nofollow noreferrer noopener">официальных плагинов</a>. 🤗</p>
+<h2 id="Обновление-документации" class="article-heading"><a href="#Обновление-документации" class="headerlink" title="Обновление документации"></a>Обновление документации<a class="article-anchor" href="#Обновление-документации" aria-hidden="true"></a></h2><p>Документация Hexo имеет открытый исходный код, его можно найти по адресу <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a>.</p>
+<h3 id="Рабочее-пространство-1" class="article-heading"><a href="#Рабочее-пространство-1" class="headerlink" title="Рабочее пространство"></a>Рабочее пространство<a class="article-anchor" href="#Рабочее-пространство-1" aria-hidden="true"></a></h3><ol>
+<li><p>Создайте форк <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a></p>
+</li>
+<li><p>Клонируйте репозиторий на компьютер и установите все зависимости.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;site.git</span><br><span class="line">$ cd site</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Начать редактировать документацию. Вы можете запустить сервер для просмотра изменений.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Выгрузите ветку.</p>
+</li>
+<li><p>Запросите принятие изменений с их описанием.</p>
+</li>
+</ol>
+<h3 id="Перевод" class="article-heading"><a href="#Перевод" class="headerlink" title="Перевод"></a>Перевод<a class="article-anchor" href="#Перевод" aria-hidden="true"></a></h3><ol>
+<li>Добавьте новую папку с языком в папке <code>source</code>. (Всё в нижнем регистре)</li>
+<li>Скопируйте markdown файлы и шаблоны из папки <code>source</code> в папку с создаваемым переводом.</li>
+<li>Добавьте новый язык в файл <code>source/_data/language.yml</code>.</li>
+<li>Скопируйте <code>en.yml</code> в <code>themes/navy/languages</code> и измените имя (всё в нижнем регистре).</li>
+</ol>
+<h2 id="Сообщение-о-проблеме" class="article-heading"><a href="#Сообщение-о-проблеме" class="headerlink" title="Сообщение о проблеме"></a>Сообщение о проблеме<a class="article-anchor" href="#Сообщение-о-проблеме" aria-hidden="true"></a></h2><p>Если Вы столкнулись с проблемой при использовании Hexo, то можно поискать решения в <a href="troubleshooting.html">устранении неполадок</a> или задать вопросы на <a target="_blank" href="https://github.com/hexojs/hexo/issues" rel="external nofollow noreferrer noopener">GitHub</a> или <a target="_blank" href="https://groups.google.com/group/hexo" rel="external nofollow noreferrer noopener">Google Group</a>. Если решения не нашлось, пожалуйста, сообщите об этом на GitHub.</p>
+<ol>
+<li>Воспроизведите проблему в режиме отладки <a href="commands.html#Режим-отладки">debug mode</a>.</li>
+<li>Запустите <code>hexo version</code> и прочтите описание версии.</li>
+<li>Создайте сообщение об ошибке с отладочными данными и номером используемой версии на GitHub.</li>
+</ol>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.992Z" itemprop="dateModified">Последнее обновление: 2020-03-03</time>
+                <a href="troubleshooting.html" class="article-footer-prev" title="Решение проблем"><i class="fa fa-chevron-left"></i><span>Пред</span></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/ru/docs/contributing.html';
+  var disqus_title = "Содействие";
+  var disqus_config = function(){
+    this.language = 'ru';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Содержание</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0%D0%BC"><span class="toc-text">Разработчикам</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%9F%D1%80%D0%B5%D0%B6%D0%B4%D0%B5-%D1%87%D0%B5%D0%BC-%D0%BD%D0%B0%D1%87%D0%B0%D1%82%D1%8C"><span class="toc-text">Прежде, чем начать</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B5-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE"><span class="toc-text">Рабочее пространство</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%9D%D0%B0-%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D1%83"><span class="toc-text">На заметку</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D0%BE%D0%B2"><span class="toc-text">Обновление официальных плагинов</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8"><span class="toc-text">Обновление документации</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B5-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE-1"><span class="toc-text">Рабочее пространство</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4"><span class="toc-text">Перевод</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BE-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B5"><span class="toc-text">Сообщение о проблеме</span></a></li></ol>
+              <a href="#" id="article-toc-top">Наверх</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Начало работы</strong><a href="index.html" class="sidebar-link">Обзор</a><a href="setup.html" class="sidebar-link">Установка</a><a href="configuration.html" class="sidebar-link">Конфигурация</a><a href="commands.html" class="sidebar-link">Команды</a><a href="migration.html" class="sidebar-link">Миграция</a><strong class="sidebar-title">Основы</strong><a href="writing.html" class="sidebar-link">Написание</a><a href="front-matter.html" class="sidebar-link">Шапка файла</a><a href="tag-plugins.html" class="sidebar-link">Плагины тегов</a><a href="asset-folders.html" class="sidebar-link">Папки с материалами</a><a href="data-files.html" class="sidebar-link">Файлы с данными</a><a href="server.html" class="sidebar-link">Сервер</a><a href="generating.html" class="sidebar-link">Генерация</a><strong class="sidebar-title">Публикация</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">Размещение одной командой</a><strong class="sidebar-title">Кастомизация</strong><a href="permalinks.html" class="sidebar-link">Постоянные ссылки</a><a href="themes.html" class="sidebar-link">Темы</a><a href="templates.html" class="sidebar-link">Шаблоны</a><a href="variables.html" class="sidebar-link">Переменные</a><a href="helpers.html" class="sidebar-link">Помощники</a><a href="internationalization.html" class="sidebar-link">Интернационализация (i18n)</a><a href="plugins.html" class="sidebar-link">Плагины</a><strong class="sidebar-title">Разное</strong><a href="troubleshooting.html" class="sidebar-link">Решение проблем</a><a href="contributing.html" class="sidebar-link current">Содействие</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

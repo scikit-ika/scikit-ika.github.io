@@ -120,28 +120,71 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">将 Hexo 部署到 GitLab Pages</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/zh-cn/docs/gitlab-pages.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p>在本教程中，我们将会使用 GitLab CI 将 Hexo 博客部署到 GitLab Pages 上。</p>
+<ol>
+<li>新建一个 repository。如果你希望你的站点能通过 <code>&lt;你的 GitLab 用户名&gt;.gitlab.io</code> 域名访问，你的 repository 应该直接命名为 <code>&lt;你的 GitLab 用户名&gt;.gitlab.io</code>。</li>
+<li>将你的 Hexo 站点文件夹推送到 repository 中。默认情况下不应该 <code>public</code> 目录将不会被推送到 repository 中，你应该检查 <code>.gitignore</code> 文件中是否包含 <code>public</code> 一行，如果没有请加上。</li>
+<li>在你的站点文件夹中新建 <code>.gitlab-ci.yml</code> 文件：</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">image:</span> <span class="string">node:10-alpine</span> <span class="comment"># use nodejs v10 LTS</span></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">  <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">node_modules/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pages:</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line">  <span class="attr">artifacts:</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>GitLab CI 应该会自动开始运行，构建成功以后你应该可以在 <code>https://&lt;你的 GitLab 用户名&gt;.gitlab.io</code> 查看你的网站。</li>
+<li>(可选) 如果你需要查看生成的文件，可以在 <a target="_blank" href="https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html" rel="external nofollow noreferrer noopener">job artifact</a> 中找到。</li>
+</ol>
+<blockquote class="note info"><p>在 GitLab.com 上，GitLab CI 是默认启用的。如果你使用的是自托管的 GitLab，你可能需要在 <code>Settings -&gt; CI / CD -&gt; Shared Runners</code> 启用 GitLab CI。</p>
+</blockquote>
+
+<h2 id="Project-page" class="article-heading"><a href="#Project-page" class="headerlink" title="Project page"></a>Project page<a class="article-anchor" href="#Project-page" aria-hidden="true"></a></h2><p>如果你更希望你的站点部署在 <code>&lt;你的 GitLab 用户名&gt;.gitlab.io</code> 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 <code>https://&lt;你的 GitLab 用户名&gt;.gitlab.io/&lt;repository 的名字&gt;</code> 访问。你需要检查你的 Hexo 配置文件，将 <code>url</code> 的值修改为 <code>https://&lt;你的 GitLab 用户名&gt;.gitlab.io/&lt;repository 的名字&gt;</code>、将 <code>root</code> 的值修改为 <code>/&lt;repository 的名字&gt;/</code></p>
+<h2 id="Useful-links" class="article-heading"><a href="#Useful-links" class="headerlink" title="Useful links"></a>Useful links<a class="article-anchor" href="#Useful-links" aria-hidden="true"></a></h2><ul>
+<li><a target="_blank" href="https://docs.gitlab.com/ee/user/project/pages/index.html" rel="external nofollow noreferrer noopener">GitLab Pages 相关文档</a></li>
+<li><a target="_blank" href="https://docs.gitlab.com/ee/ci/README.html" rel="external nofollow noreferrer noopener">GitLab CI 相关文档</a></li>
+<li><a target="_blank" href="https://www.baidu.com/s?wd=Hexo%20GitLab" rel="external nofollow noreferrer noopener">在百度上搜索 “Hexo GitLab”</a></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:10.241Z" itemprop="dateModified">上次更新：2020-03-03</time>
+                <a href="github-pages.html" class="article-footer-prev" title="GitHub Pages"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="one-command-deployment.html" class="article-footer-next" title="一键部署"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/zh-cn/docs/gitlab-pages.html';
+  var disqus_title = "将 Hexo 部署到 GitLab Pages";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Project-page"><span class="toc-text">Project page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Useful-links"><span class="toc-text">Useful links</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="setup.html" class="sidebar-link">建站</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a><strong class="sidebar-title">基本操作</strong><a href="writing.html" class="sidebar-link">写作</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><strong class="sidebar-title">部署</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link current">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">一键部署</a><strong class="sidebar-title">自定义</strong><a href="permalinks.html" class="sidebar-link">永久链接</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link">插件</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

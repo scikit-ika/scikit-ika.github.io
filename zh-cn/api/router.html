@@ -120,28 +120,67 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">路由</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/zh-cn/api/router.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p>路由存储了网站中所用到的所有路径。</p>
+<h2 id="获取路径" class="article-heading"><a href="#获取路径" class="headerlink" title="获取路径"></a>获取路径<a class="article-anchor" href="#获取路径" aria-hidden="true"></a></h2><p><code>get</code> 方法会传回一个 <a target="_blank" href="http://nodejs.org/api/stream.html" rel="external nofollow noreferrer noopener">Stream</a>，例如把该路径的资料存储到某个指定位置。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> data = hexo.route.get(<span class="string">'index.html'</span>);</span><br><span class="line"><span class="keyword">var</span> dest = fs.createWriteStream(<span class="string">'somewhere'</span>);</span><br><span class="line"></span><br><span class="line">data.pipe(dest);</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置路径" class="article-heading"><a href="#设置路径" class="headerlink" title="设置路径"></a>设置路径<a class="article-anchor" href="#设置路径" aria-hidden="true"></a></h2><p>您可以在 <code>set</code> 方法中使用字符串、<a target="_blank" href="http://nodejs.org/api/buffer.html" rel="external nofollow noreferrer noopener">Buffer</a> 或函数，如下：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// String</span></span><br><span class="line">hexo.route.set(<span class="string">'index.html'</span>, <span class="string">'index'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Buffer</span></span><br><span class="line">hexo.route.set(<span class="string">'index.html'</span>, <span class="keyword">new</span> Buffer(<span class="string">'index'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Function (Promise)</span></span><br><span class="line">hexo.route.set(<span class="string">'index.html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">    resolve(<span class="string">'index'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Function (Callback)</span></span><br><span class="line">hexo.route.set(<span class="string">'index.html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">  callback(<span class="literal">null</span>, <span class="string">'index'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>您还可以设置该路径是否更新，这样在生成文件时便能忽略未更动的文件，加快生成时间。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.route.set(<span class="string">'index.html'</span>, &#123;</span><br><span class="line">    data: <span class="string">'index'</span>,</span><br><span class="line">    modified: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// hexo.route.isModified('index.html') =&gt; false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="移除路径" class="article-heading"><a href="#移除路径" class="headerlink" title="移除路径"></a>移除路径<a class="article-anchor" href="#移除路径" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.route.remove(<span class="string">'index.html'</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="获得路由表" class="article-heading"><a href="#获得路由表" class="headerlink" title="获得路由表"></a>获得路由表<a class="article-anchor" href="#获得路由表" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.route.list();</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式化路径" class="article-heading"><a href="#格式化路径" class="headerlink" title="格式化路径"></a>格式化路径<a class="article-anchor" href="#格式化路径" aria-hidden="true"></a></h2><p><code>format</code> 方法可将字符串转为合法的路径。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.route.format(<span class="string">'archives/'</span>);</span><br><span class="line"><span class="comment">// archives/index.html</span></span><br></pre></td></tr></table></figure>
+
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:10.239Z" itemprop="dateModified">上次更新：2020-03-03</time>
+                <a href="locals.html" class="article-footer-prev" title="本地变量"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="box.html" class="article-footer-next" title="盒(Box)"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/zh-cn/api/router.html';
+  var disqus_title = "路由";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%B7%AF%E5%BE%84"><span class="toc-text">获取路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%B7%AF%E5%BE%84"><span class="toc-text">设置路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E9%99%A4%E8%B7%AF%E5%BE%84"><span class="toc-text">移除路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%BE%97%E8%B7%AF%E7%94%B1%E8%A1%A8"><span class="toc-text">获得路由表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%B7%AF%E5%BE%84"><span class="toc-text">格式化路径</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">核心</strong><a href="index.html" class="sidebar-link">概述</a><a href="events.html" class="sidebar-link">事件</a><a href="locals.html" class="sidebar-link">本地变量</a><a href="router.html" class="sidebar-link current">路由</a><a href="box.html" class="sidebar-link">盒(Box)</a><a href="rendering.html" class="sidebar-link">渲染</a><a href="posts.html" class="sidebar-link">文章</a><a href="scaffolds.html" class="sidebar-link">模版 (Scaffold)</a><a href="themes.html" class="sidebar-link">主题</a><strong class="sidebar-title">扩展</strong><a href="console.html" class="sidebar-link">控制台 (Console)</a><a href="deployer.html" class="sidebar-link">部署器 (Deployer)</a><a href="filter.html" class="sidebar-link">过滤器 (Filter)</a><a href="generator.html" class="sidebar-link">生成器 (Generator)</a><a href="helper.html" class="sidebar-link">辅助函数 (Helper)</a><a href="migrator.html" class="sidebar-link">迁移器 (Migrator)</a><a href="processor.html" class="sidebar-link">处理器 (Processor)</a><a href="renderer.html" class="sidebar-link">渲染引擎 (Renderer)</a><a href="tag.html" class="sidebar-link">标签 (Tag)</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

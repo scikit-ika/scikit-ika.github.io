@@ -120,28 +120,111 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Contribuindo</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/pt-br/docs/contributing.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Melhore esta Documentação"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p>We welcome you to join the development of Hexo. 🤗</p>
+<h2 id="Desenvolvimento" class="article-heading"><a href="#Desenvolvimento" class="headerlink" title="Desenvolvimento"></a>Desenvolvimento<a class="article-anchor" href="#Desenvolvimento" aria-hidden="true"></a></h2><p>Nós damos o parabéns a você por se juntar ao desenvolvimento do Hexo. Este documento irá ajudá-lo através do processo.</p>
+<h3 id="Antes-de-Voce-Comecar" class="article-heading"><a href="#Antes-de-Voce-Comecar" class="headerlink" title="Antes de Você Começar"></a>Antes de Você Começar<a class="article-anchor" href="#Antes-de-Voce-Comecar" aria-hidden="true"></a></h3><p>Por favor, siga o estilo de codificação:</p>
+<ul>
+<li>Siga o <a target="_blank" href="https://google.github.io/styleguide/jsguide.html" rel="external nofollow noreferrer noopener">Guia de Estilo de Código JavaScript do Google</a>.</li>
+<li>Use soft-tabs com um recuo de dois espaços.</li>
+<li>Não coloque vírgulas primeiro.</li>
+</ul>
+<h3 id="Fluxo-de-Trabalho" class="article-heading"><a href="#Fluxo-de-Trabalho" class="headerlink" title="Fluxo de Trabalho"></a>Fluxo de Trabalho<a class="article-anchor" href="#Fluxo-de-Trabalho" aria-hidden="true"></a></h3><ol>
+<li><p>Faça um fork <a target="_blank" href="https://github.com/hexojs/hexo" rel="external nofollow noreferrer noopener">hexojs/hexo</a>.</p>
+</li>
+<li><p>Clone o repositório no seu computador e instale as dependências.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;hexo.git</span><br><span class="line">$ cd hexo</span><br><span class="line">$ npm install</span><br><span class="line">$ git submodule update --init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Crie um branch para a feature a ser desenvolvida.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Comece a implementação.</p>
+</li>
+<li><p>Faça o push da branch para seu repositório remoto:</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Crie um pull request e descreva as mudanças.</p>
+</li>
+</ol>
+<h3 id="Aviso-Previo" class="article-heading"><a href="#Aviso-Previo" class="headerlink" title="Aviso Prévio"></a>Aviso Prévio<a class="article-anchor" href="#Aviso-Previo" aria-hidden="true"></a></h3><ul>
+<li><p>Não modifique o número da versão no arquivo <code>package.json</code>.</p>
+</li>
+<li><p>Seu pedido de pull request só será aceito quando os testes tiverem passado. Não se esqueça de executar testes antes da submissão.</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm test</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Updating-official-plugins" class="article-heading"><a href="#Updating-official-plugins" class="headerlink" title="Updating official-plugins"></a>Updating official-plugins<a class="article-anchor" href="#Updating-official-plugins" aria-hidden="true"></a></h2><p>Also, we welcome PR or issue to <a target="_blank" href="https://github.com/hexojs" rel="external nofollow noreferrer noopener">official-plugins</a>. 🤗</p>
+<h2 id="Atualizando-a-Documentacao" class="article-heading"><a href="#Atualizando-a-Documentacao" class="headerlink" title="Atualizando a Documentação"></a>Atualizando a Documentação<a class="article-anchor" href="#Atualizando-a-Documentacao" aria-hidden="true"></a></h2><p>A documentação do Hexo é de código aberto e você pode encontrar o código-fonte em <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a>.</p>
+<h3 id="Fluxo-de-trabalho" class="article-heading"><a href="#Fluxo-de-trabalho" class="headerlink" title="Fluxo de trabalho"></a>Fluxo de trabalho<a class="article-anchor" href="#Fluxo-de-trabalho" aria-hidden="true"></a></h3><ol>
+<li><p>Faça um fork <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a></p>
+</li>
+<li><p>Clone o repositório no seu computador e instale as dependências.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;site.git</span><br><span class="line">$ cd site</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Comece a editar a documentação. Você pode iniciar o servidor para a visualização das mudanças em tempo real.</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Faça o push da branch para seu repositório remoto:</p>
+</li>
+<li><p>Crie um pull request e descreva as mudanças.</p>
+</li>
+</ol>
+<h3 id="Traduzindo" class="article-heading"><a href="#Traduzindo" class="headerlink" title="Traduzindo"></a>Traduzindo<a class="article-anchor" href="#Traduzindo" aria-hidden="true"></a></h3><ol>
+<li>Adicione um diretório para o novo idioma dentro do repositório <code>source</code>. (Todas as letras minúsculas)</li>
+<li>Copie os arquivos de template e Markdown que estão no <code>source</code> para o diretório do novo idioma.</li>
+<li>Adicione o novo idioma a <code>source/_data/language.yml</code>.</li>
+<li>Copie o arquivo <code>en.yml</code> em <code>themes/navy/languages</code> e o renomeie para o nome do novo idioma (todas as minúsculas).</li>
+</ol>
+<h2 id="Reportando-Issues" class="article-heading"><a href="#Reportando-Issues" class="headerlink" title="Reportando Issues"></a>Reportando Issues<a class="article-anchor" href="#Reportando-Issues" aria-hidden="true"></a></h2><p>Quando você encontra alguns problemas ao usar o Hexo, você pode encontrar as soluções em <a href="troubleshooting.html">Solução de problemas</a> ou nos perguntar no <a target="_blank" href="https://github.com/hexojs/hexo/issues" rel="external nofollow noreferrer noopener">GitHub</a> ou <a target="_blank" href="https://groups.google.com/group/hexo" rel="external nofollow noreferrer noopener">Google Group</a>. Se você não conseguir encontrar a resposta, abra uma nova issue no GitHub.</p>
+<ol>
+<li>Reproduza o problema em <a href="commands.html#Debug_mode">modo de depuração</a>.</li>
+<li>Execute <code>hexo version</code> e verifique as informações da versão.</li>
+<li>Poste todas as mensagem de depuração e a versão de sua instância do Hexo no GitHub.</li>
+</ol>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.986Z" itemprop="dateModified">Última Atualização: 2020-03-03</time>
+                <a href="troubleshooting.html" class="article-footer-prev" title="Soluções de Problemas"><i class="fa fa-chevron-left"></i><span>Anterior</span></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/pt-br/docs/contributing.html';
+  var disqus_title = "Contribuindo";
+  var disqus_config = function(){
+    this.language = 'pt-br';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Conteúdo</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Desenvolvimento"><span class="toc-text">Desenvolvimento</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Antes-de-Voce-Comecar"><span class="toc-text">Antes de Você Começar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fluxo-de-Trabalho"><span class="toc-text">Fluxo de Trabalho</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aviso-Previo"><span class="toc-text">Aviso Prévio</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Updating-official-plugins"><span class="toc-text">Updating official-plugins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Atualizando-a-Documentacao"><span class="toc-text">Atualizando a Documentação</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fluxo-de-trabalho"><span class="toc-text">Fluxo de trabalho</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Traduzindo"><span class="toc-text">Traduzindo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reportando-Issues"><span class="toc-text">Reportando Issues</span></a></li></ol>
+              <a href="#" id="article-toc-top">Ir para o Topo</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Começando</strong><a href="index.html" class="sidebar-link">Visão Geral</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuração</a><a href="commands.html" class="sidebar-link">Comandos</a><a href="migration.html" class="sidebar-link">Migração</a><strong class="sidebar-title">Uso Básico</strong><a href="writing.html" class="sidebar-link">Escrevendo</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Diretórios de Recursos</a><a href="data-files.html" class="sidebar-link">Arquivos de Dados</a><a href="server.html" class="sidebar-link">Servidor</a><a href="generating.html" class="sidebar-link">Gerando</a><strong class="sidebar-title">Implantação</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customização</strong><a href="permalinks.html" class="sidebar-link">Links Permanentes</a><a href="themes.html" class="sidebar-link">Temas</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variáveis</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internacionalização (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscelânea</strong><a href="troubleshooting.html" class="sidebar-link">Soluções de Problemas</a><a href="contributing.html" class="sidebar-link current">Contribuindo</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

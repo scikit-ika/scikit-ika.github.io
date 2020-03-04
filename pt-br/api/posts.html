@@ -120,28 +120,157 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Postagens</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/pt-br/api/posts.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Melhore esta Documentação"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <h2 id="Criar-uma-Postagem" class="article-heading"><a href="#Criar-uma-Postagem" class="headerlink" title="Criar uma Postagem"></a>Criar uma Postagem<a class="article-anchor" href="#Criar-uma-Postagem" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.post.create(data, replace);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Argumento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>data</code></td>
+<td>Dados</td>
+</tr>
+<tr>
+<td><code>replace</code></td>
+<td>Substitui arquivos existentes</td>
+</tr>
+</tbody></table>
+<p>Os atributos de uma postagem podem ser definidos em <code>data</code>. A tabela abaixo inclui as informações mais importantes. Atributos adicionais podem vir a ser adicionados no <a href="front-matter.html">front-matter</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>title</code></td>
+<td>Título</td>
+</tr>
+<tr>
+<td><code>slug</code></td>
+<td>URL</td>
+</tr>
+<tr>
+<td><code>layout</code></td>
+<td>Layout. Usa a configuração <code>default_layout</code> como padrão.</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>Caminho. Por padrão, o Hexo constrói o caminho da postagem de acordo com a definição <code>new_post_path</code>.</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>Data. Utiliza a data atual como padrão.</td>
+</tr>
+</tbody></table>
+<h2 id="Publicar-um-Rascunho" class="article-heading"><a href="#Publicar-um-Rascunho" class="headerlink" title="Publicar um Rascunho"></a>Publicar um Rascunho<a class="article-anchor" href="#Publicar-um-Rascunho" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.post.publish(data, replace);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Argumento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>data</code></td>
+<td>Dados</td>
+</tr>
+<tr>
+<td><code>replace</code></td>
+<td>Substitui arquivos existentes</td>
+</tr>
+</tbody></table>
+<p>Os atributos de uma postagem podem ser definidos em <code>data</code>. A tabela abaixo inclui as informações mais importantes. Atributos adicionais podem vir a ser adicionados no front-matter.</p>
+<table>
+<thead>
+<tr>
+<th>Dados</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>slug</code></td>
+<td>Nome do arquivo (Campo obrigatório)</td>
+</tr>
+<tr>
+<td><code>layout</code></td>
+<td>Layout. Usa a definição <code>default_layout</code> como padrão.</td>
+</tr>
+</tbody></table>
+<h2 id="Renderizar" class="article-heading"><a href="#Renderizar" class="headerlink" title="Renderizar"></a>Renderizar<a class="article-anchor" href="#Renderizar" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.post.render(source, data);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Argumento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>source</code></td>
+<td>Caminho completo de um arquivo (Opcional)</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>Dados</td>
+</tr>
+</tbody></table>
+<p>O argumento <code>data</code> deve conter o atributo <code>content</code>. Caso não inclua, o Hexo tentará carregar o arquivo inicial. As etapas de execução dessa função são listadas abaixo:</p>
+<ul>
+<li>Executa os filtros de <code>before_post_render</code></li>
+<li>Renderiza utilizando Markdown ou outros renderizadores (dependendo da extensão do arquivo)</li>
+<li>Renderiza utilizando <a target="_blank" href="http://mozilla.github.io/nunjucks/" rel="external nofollow noreferrer noopener">Nunjucks</a></li>
+<li>Executa os filtros de <code>after_post_render</code></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.984Z" itemprop="dateModified">Última Atualização: 2020-03-03</time>
+                <a href="rendering.html" class="article-footer-prev" title="Renderização"><i class="fa fa-chevron-left"></i><span>Anterior</span></a><a href="scaffolds.html" class="article-footer-next" title="Scaffolds"><span>Próximo</span><i class="fa fa-chevron-right"></i></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/pt-br/api/posts.html';
+  var disqus_title = "Postagens";
+  var disqus_config = function(){
+    this.language = 'pt-br';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Conteúdo</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Criar-uma-Postagem"><span class="toc-text">Criar uma Postagem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Publicar-um-Rascunho"><span class="toc-text">Publicar um Rascunho</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Renderizar"><span class="toc-text">Renderizar</span></a></li></ol>
+              <a href="#" id="article-toc-top">Ir para o Topo</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Core</strong><a href="index.html" class="sidebar-link">Visão Geral</a><a href="events.html" class="sidebar-link">Events</a><a href="locals.html" class="sidebar-link">Variáveis Locais</a><a href="router.html" class="sidebar-link">Router</a><a href="box.html" class="sidebar-link">Box</a><a href="rendering.html" class="sidebar-link">Renderização</a><a href="posts.html" class="sidebar-link current">Postagens</a><a href="scaffolds.html" class="sidebar-link">Scaffolds</a><a href="themes.html" class="sidebar-link">Temas</a><strong class="sidebar-title">Extensões</strong><a href="console.html" class="sidebar-link">Console</a><a href="deployer.html" class="sidebar-link">Deployer</a><a href="filter.html" class="sidebar-link">Filter</a><a href="generator.html" class="sidebar-link">Generator</a><a href="helper.html" class="sidebar-link">Helper</a><a href="migrator.html" class="sidebar-link">Migrator</a><a href="processor.html" class="sidebar-link">Processor</a><a href="renderer.html" class="sidebar-link">Renderer</a><a href="tag.html" class="sidebar-link">Tag</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

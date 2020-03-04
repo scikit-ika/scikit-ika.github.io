@@ -120,28 +120,86 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">GitHub Pages</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/ko/docs/github-pages.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p>In this tutorial, we use <a target="_blank" href="https://travis-ci.com/" rel="external nofollow noreferrer noopener">Travis CI</a> to deploy Github Pages. It is free for open source repository, meaning your repository’s <code>master</code> branch has to be public. Please skip to the <a href="#Private-repository">Private repository</a> section if you prefer to keep the repo private, or prefer not to upload your source folder to GitHub.</p>
+<ol>
+<li>Create a repo named <b><em>username</em>.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead.</li>
+<li>Push the files of your Hexo folder to the repository. The <code>public/</code> folder is not (and should not be) uploaded by default, make sure the <code>.gitignore</code> file contains <code>public/</code> line. The folder structure should be roughly similar to <a target="_blank" href="https://github.com/hexojs/hexo-starter" rel="external nofollow noreferrer noopener">this repo</a>, without the <code>.gitmodules</code> file.</li>
+<li>Add <a target="_blank" href="https://github.com/marketplace/travis-ci" rel="external nofollow noreferrer noopener">Travis CI</a> to your account.</li>
+<li>Go to <a target="_blank" href="https://github.com/settings/installations" rel="external nofollow noreferrer noopener">Applications settings</a>, configure Travis CI to have access to the repo.</li>
+<li>You’ll be redirected to Travis page.</li>
+<li>On a new tab, generate a <a target="_blank" href="https://github.com/settings/tokens" rel="external nofollow noreferrer noopener">new token</a> with <strong>repo</strong> scopes. Note down the token value.</li>
+<li>On the Travis page, go to your repo’s setting. Under <strong>Environment Variables</strong>, put <strong>GH_TOKEN</strong> as name and paste the token onto value. Click Add to save it.</li>
+<li>Add <code>.travis.yml</code> file to your repo (alongside _config.yml &amp; package.json) with the following content:<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sudo:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">10</span> <span class="comment"># use nodejs v10 LTS</span></span><br><span class="line"><span class="attr">cache:</span> <span class="string">npm</span></span><br><span class="line"><span class="attr">branches:</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span> <span class="comment"># build master branch only</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span> <span class="comment"># generate static files</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="attr">skip-cleanup:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github-token:</span> <span class="string">$GH_TOKEN</span></span><br><span class="line">  <span class="attr">keep-history:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">on:</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">local-dir:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure></li>
+<li>Once Travis CI finish the deployment, the generated pages can be found in the <code>gh-pages</code> branch of your repository</li>
+<li>In your GitHub repo’s setting, navigate to “GitHub Pages” section and change Source to <strong>gh-pages branch</strong>.</li>
+<li>Check the webpage at <em>username</em>.github.io.</li>
+</ol>
+<h2 id="Project-page" class="article-heading"><a href="#Project-page" class="headerlink" title="Project page"></a>Project page<a class="article-anchor" href="#Project-page" aria-hidden="true"></a></h2><p>If you prefer to have a project page on GitHub:</p>
+<ol>
+<li>Navigate to your repo on GitHub. Go to the <strong>Settings</strong> tab. Change the <strong>Repository name</strong> so your blog is available at <b>username.github.io/<em>repository</em></b>,  <strong>repository</strong> can be any name, like <em>blog</em> or <em>hexo</em>.</li>
+<li>Edit your <strong>_config.yml</strong>, change the <code>root:</code> value to the <code>/&lt;repository&gt;/</code> (must starts and ends with a slash, without the brackets).</li>
+<li>Commit and push.</li>
+</ol>
+<h2 id="Private-repository" class="article-heading"><a href="#Private-repository" class="headerlink" title="Private repository"></a>Private repository<a class="article-anchor" href="#Private-repository" aria-hidden="true"></a></h2><p>The following instruction is adapted from <a href="/docs/one-command-deployment">one-command deployment</a> page.</p>
+<ol>
+<li><p>Install <a target="_blank" href="https://github.com/hexojs/hexo-deployer-git" rel="external nofollow noreferrer noopener">hexo-deployer-git</a>.</p>
+</li>
+<li><p>Add the following configurations to <strong>_config.yml</strong>, (remove existing lines if any)</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line">  <span class="comment"># example, https://github.com/hexojs/hexojs.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Run <code>hexo clean &amp;&amp; hexo deploy</code>.</p>
+</li>
+<li><p>Check the webpage at <em>username</em>.github.io.</p>
+</li>
+</ol>
+<h2 id="Useful-links" class="article-heading"><a href="#Useful-links" class="headerlink" title="Useful links"></a>Useful links<a class="article-anchor" href="#Useful-links" aria-hidden="true"></a></h2><ul>
+<li><a target="_blank" href="https://help.github.com/categories/github-pages-basics/" rel="external nofollow noreferrer noopener">GitHub Pages</a></li>
+<li><a target="_blank" href="https://docs.travis-ci.com/user/tutorial/" rel="external nofollow noreferrer noopener">Travis CI Docs</a></li>
+</ul>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.979Z" itemprop="dateModified">Last updated: 2020-03-03</time>
+                <a href="generating.html" class="article-footer-prev" title="Generating"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="gitlab-pages.html" class="article-footer-next" title="GitLab Pages"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/ko/docs/github-pages.html';
+  var disqus_title = "GitHub Pages";
+  var disqus_config = function(){
+    this.language = 'ko';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Project-page"><span class="toc-text">Project page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Private-repository"><span class="toc-text">Private repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Useful-links"><span class="toc-text">Useful links</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link current">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>

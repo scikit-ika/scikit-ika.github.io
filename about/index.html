@@ -120,28 +120,56 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">About</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/about/index.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <p><code>scikit-ika</code> is an open source implementation of methods for handling <code>recurrent concept drifts</code>. It continuously models evolving data streams, providing accurate predictions in real time, using probabilistic networks and meta-information to proactively predict a change in the data stream.</p>
+<h1 id="Why" class="article-heading"><a href="#Why" class="headerlink" title="Why"></a>Why<a class="article-anchor" href="#Why" aria-hidden="true"></a></h1><p>Many applications deal with data streams. Data streams can be perceived as a continuous sequence of data instances, often arriving at a high rate. In data streams, the underlying data distribution may change over time, causing decay in the predictive ability of the machine learning models. This phenomenon is known as <code>concept drift</code>.</p>
+<p>Moreover, it is common for previously seen concepts to recur in real-world data streams, known as <code>recurrent concept drifts</code>. If a concept reappears, for example a particular weather pattern, previously learnt classifiers can be reused; thus the performance of the learning algorithm can be improved.</p>
+<h1 id="The-Name" class="article-heading"><a href="#The-Name" class="headerlink" title="The Name"></a>The Name<a class="article-anchor" href="#The-Name" aria-hidden="true"></a></h1><p><code>ika</code> stands for any creatures that swims in water, or prized possession in Māori. This is exactly what our system does: ‘swim’ in data streams, and the learned knowledge is kept as the most prized possession.</p>
+<p>Besides, <code>ika</code> stands for octopus in Japanese, which is where our logo comes from.</p>
+<h1 id="The-Team" class="article-heading"><a href="#The-Team" class="headerlink" title="The Team"></a>The Team<a class="article-anchor" href="#The-Team" aria-hidden="true"></a></h1><p><a target="_blank" href="https://sites.google.com/view/yunsingkoh/home" rel="external nofollow noreferrer noopener">Dr. Yun Sing Koh</a> and <a target="_blank" href="https://www.cs.auckland.ac.nz/~gill/" rel="external nofollow noreferrer noopener">Prof. Gillian Dobbie</a> and other hard working research fellows.</p>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-04T01:15:21.674Z" itemprop="dateModified">Last updated: 2020-03-04</time>
+                
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/about/index.html';
+  var disqus_title = "About";
+  var disqus_config = function(){
+    this.language = 'en';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why"><span class="toc-text">Why</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Name"><span class="toc-text">The Name</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Team"><span class="toc-text">The Team</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    
+  </div>
+</aside>
     </div>
   </div>
 </div>

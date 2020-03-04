@@ -120,28 +120,141 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
-                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Writing</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/th/docs/writing.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                {{ page_anchor(page.content) }}
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/AIqBubK6ZLc" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p>คุณสามรถรันคำสั่งต่อไปเพื่อสร้างโพสต์ใหม่หรือเพจใหม่:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>post</code> เป็น <code>layout</code> default แต่คุณตั้งค่า layout ของตนได้โดยเปลี่ยนการตั้งค่าของ <code>default_layout</code> ใน  <code>_config.yml</code> ได้</p>
+<h3 id="Layout" class="article-heading"><a href="#Layout" class="headerlink" title="Layout"></a>Layout<a class="article-anchor" href="#Layout" aria-hidden="true"></a></h3><p>ใน hexo มี layout ทั้งหมดสามอย่าง: <code>post</code> <code>page</code>  และ <code>draft</code> ไฟล์ที่สร้างมาในต่าง layout จะอยู่ใน path ท่ีแตกต่างกัน<br>โพสต์ท่ีสร้างมาใหม่จะบันทึกอยู่ใน folder  <code>source/_posts</code></p>
+<table>
+<thead>
+<tr>
+<th>Layout</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>post</code></td>
+<td><code>source/_posts</code></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td><code>source</code></td>
+</tr>
+<tr>
+<td><code>draft</code></td>
+<td><code>source/_drafts</code></td>
+</tr>
+</tbody></table>
+<blockquote class="note tip"><strong class="note-title">Don't process my posts!</strong><p>ถ้าคุณไม่อยากทำให้โพสต์ของตนถูกจัดการ คุณสามารถตั้งค่าให้เป็น <code>layout: false</code>ใน front-matter</p>
+</blockquote>
+
+<h3 id="Filename" class="article-heading"><a href="#Filename" class="headerlink" title="Filename"></a>Filename<a class="article-anchor" href="#Filename" aria-hidden="true"></a></h3><p>hexo ใช้หัวข้อของโพสต์เป็นชื่อไฟล์ คุณสามารถตั้งค่า <code>new_post_name</code> ในไฟล์<br><code>_config.yml</code> เพื่อเปลี่ยนชื่อไฟล์ default ยกตัวอย่างเช่น<br><code>:year-:month-:day-:title.md</code><br>จะทำให้ชื่อไฟล์มีกาลเวลาของการสร้างไฟล์รวมอยู่ด้วย คุณใช้ placeholder ต่อไปได้:</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:title</code></td>
+<td>Post title (lower case, with spaces replaced by hyphens)</td>
+</tr>
+<tr>
+<td><code>:year</code></td>
+<td>Created year, e.g. <code>2015</code></td>
+</tr>
+<tr>
+<td><code>:month</code></td>
+<td>Created month (leading zeros), e.g. <code>04</code></td>
+</tr>
+<tr>
+<td><code>:i_month</code></td>
+<td>Created month (no leading zeros), e.g. <code>4</code></td>
+</tr>
+<tr>
+<td><code>:day</code></td>
+<td>Created day (leading zeros), e.g. <code>07</code></td>
+</tr>
+<tr>
+<td><code>:i_day</code></td>
+<td>Created day (no leading zeros), e.g. <code>7</code></td>
+</tr>
+</tbody></table>
+<h3 id="Drafts" class="article-heading"><a href="#Drafts" class="headerlink" title="Drafts"></a>Drafts<a class="article-anchor" href="#Drafts" aria-hidden="true"></a></h3><p><code>draft</code> เป็น layout อย่างหนึ่งของ hexo โพสต์ท่ีตั้งค่า layout เป็น draft<br>นั้นจะถูกบันทึกอยู่ใน folder <code>source/_drafts</code>  คุณสามารถใช้คำสั่ง <code>publish</code> ไปย้ายไฟล์ไปถึง folder <code>source/_posts</code>  ในท่ีนี้คำสั่ง <code>publish</code> คล้ายกับคำสั่ง <code>new</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>draft จะไม่ render ให้เห็นในเว็บ by default คุณสามารถเพิ่มตัวเลือก <code>--draft</code><br>ให้เมื่อรัน hexo หรือ enable <code>render_drafts</code> ในไฟล์ <code>_config.yml</code> เพื่อ render draft</p>
+<h3 id="Scaffolds" class="article-heading"><a href="#Scaffolds" class="headerlink" title="Scaffolds"></a>Scaffolds<a class="article-anchor" href="#Scaffolds" aria-hidden="true"></a></h3><p>เมื่อสร้างโพสต์ขึ้นมา hexo จะสร้างไฟล์ตามไฟล์ท่ีมีอยู่ใน folder <code>scaffolds</code>  ยกตัวอย่างเช่น：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new photo <span class="string">"My Gallery"</span></span><br></pre></td></tr></table></figure>
+
+<p>เมื่อรันคำสั่งนี้ hexo จะลองหา <code>photo.md</code> ใน folder  <code>scaffolds</code>  และตามด้วยการสร้างโพสต์ขึ้นมา placeholder ต่อไปเป็น placeholder<br>ท่ีตั้งค่าได้ใน scaffold：</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>layout</code></td>
+<td>Layout</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>Title</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>File created date</td>
+</tr>
+</tbody></table>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
-                {{ page_nav() }}
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:10.001Z" itemprop="dateModified">Last updated: 2020-03-03</time>
+                <a href="migration.html" class="article-footer-prev" title="Migration"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="front-matter.html" class="article-footer-next" title="Front-matter"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'scikitika';
+  var disqus_url = 'https://scikit-ika.github.io/th/docs/writing.html';
+  var disqus_title = "Writing";
+  var disqus_config = function(){
+    this.language = 'th';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
-              {{ toc(page.content, {list_number: false}) }}
-              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Layout"><span class="toc-text">Layout</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Filename"><span class="toc-text">Filename</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Drafts"><span class="toc-text">Drafts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scaffolds"><span class="toc-text">Scaffolds</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link current">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a>
+  </div>
+</aside>
     </div>
   </div>
 </div>
