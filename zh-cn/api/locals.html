@@ -120,83 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">局部变量</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/zh-cn/api/locals.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>局部变量用于模版渲染，也就是模版中的 <code>site</code> 变量。</p>
-<h2 id="默认变量" class="article-heading"><a href="#默认变量" class="headerlink" title="默认变量"></a>默认变量<a class="article-anchor" href="#默认变量" aria-hidden="true"></a></h2><table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>posts</code></td>
-<td>所有文章</td>
-</tr>
-<tr>
-<td><code>pages</code></td>
-<td>所有分页</td>
-</tr>
-<tr>
-<td><code>categories</code></td>
-<td>所有分类</td>
-</tr>
-<tr>
-<td><code>tags</code></td>
-<td>所有标签</td>
-</tr>
-</tbody></table>
-<h2 id="获取变量" class="article-heading"><a href="#获取变量" class="headerlink" title="获取变量"></a>获取变量<a class="article-anchor" href="#获取变量" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.locals.get(<span class="string">'posts'</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置变量" class="article-heading"><a href="#设置变量" class="headerlink" title="设置变量"></a>设置变量<a class="article-anchor" href="#设置变量" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.locals.set(<span class="string">'posts'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="移除变量" class="article-heading"><a href="#移除变量" class="headerlink" title="移除变量"></a>移除变量<a class="article-anchor" href="#移除变量" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.locals.remove(<span class="string">'posts'</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="获取所有变量" class="article-heading"><a href="#获取所有变量" class="headerlink" title="获取所有变量"></a>获取所有变量<a class="article-anchor" href="#获取所有变量" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.locals.toObject();</span><br></pre></td></tr></table></figure>
-
-<h2 id="清除缓存" class="article-heading"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存<a class="article-anchor" href="#清除缓存" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.locals.invalidate();</span><br></pre></td></tr></table></figure>
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:10.239Z" itemprop="dateModified">上次更新：2020-03-03</time>
-                <a href="events.html" class="article-footer-prev" title="事件"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="router.html" class="article-footer-next" title="路由"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/zh-cn/api/locals.html';
-  var disqus_title = "局部变量";
-  var disqus_config = function(){
-    this.language = 'zh';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%98%E9%87%8F"><span class="toc-text">默认变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%8F%98%E9%87%8F"><span class="toc-text">获取变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F"><span class="toc-text">设置变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E9%99%A4%E5%8F%98%E9%87%8F"><span class="toc-text">移除变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8F%98%E9%87%8F"><span class="toc-text">获取所有变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98"><span class="toc-text">清除缓存</span></a></li></ol>
-              <a href="#" id="article-toc-top">回到顶部</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">核心</strong><a href="index.html" class="sidebar-link">概述</a><a href="events.html" class="sidebar-link">事件</a><a href="locals.html" class="sidebar-link current">本地变量</a><a href="router.html" class="sidebar-link">路由</a><a href="box.html" class="sidebar-link">盒(Box)</a><a href="rendering.html" class="sidebar-link">渲染</a><a href="posts.html" class="sidebar-link">文章</a><a href="scaffolds.html" class="sidebar-link">模版 (Scaffold)</a><a href="themes.html" class="sidebar-link">主题</a><strong class="sidebar-title">扩展</strong><a href="console.html" class="sidebar-link">控制台 (Console)</a><a href="deployer.html" class="sidebar-link">部署器 (Deployer)</a><a href="filter.html" class="sidebar-link">过滤器 (Filter)</a><a href="generator.html" class="sidebar-link">生成器 (Generator)</a><a href="helper.html" class="sidebar-link">辅助函数 (Helper)</a><a href="migrator.html" class="sidebar-link">迁移器 (Migrator)</a><a href="processor.html" class="sidebar-link">处理器 (Processor)</a><a href="renderer.html" class="sidebar-link">渲染引擎 (Renderer)</a><a href="tag.html" class="sidebar-link">标签 (Tag)</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>

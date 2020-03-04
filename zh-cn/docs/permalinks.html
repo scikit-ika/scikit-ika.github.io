@@ -120,138 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">永久链接（Permalinks）</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/zh-cn/docs/permalinks.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>您可以在 <code>_config.yml</code> 配置中调整网站的永久链接或者在每篇文章的 Front-matter 中指定。</p>
-<h3 id="变量" class="article-heading"><a href="#变量" class="headerlink" title="变量"></a>变量<a class="article-anchor" href="#变量" aria-hidden="true"></a></h3><p>除了下列变量外，您还可使用 Front-matter 中的所有属性。</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>:year</code></td>
-<td>文章的发表年份（4 位数）</td>
-</tr>
-<tr>
-<td><code>:month</code></td>
-<td>文章的发表月份（2 位数）</td>
-</tr>
-<tr>
-<td><code>:i_month</code></td>
-<td>文章的发表月份（去掉开头的零）</td>
-</tr>
-<tr>
-<td><code>:day</code></td>
-<td>文章的发表日期 (2 位数)</td>
-</tr>
-<tr>
-<td><code>:i_day</code></td>
-<td>文章的发表日期（去掉开头的零）</td>
-</tr>
-<tr>
-<td><code>:hour</code></td>
-<td>文章发表时的小时 (2 位数)</td>
-</tr>
-<tr>
-<td><code>:minute</code></td>
-<td>文章发表时的分钟 (2 位数)</td>
-</tr>
-<tr>
-<td><code>:title</code></td>
-<td>文件名称</td>
-</tr>
-<tr>
-<td><code>:post_title</code></td>
-<td>文章标题</td>
-</tr>
-<tr>
-<td><code>:id</code></td>
-<td>文章 ID (<em>not persistent across <a href="/zh-cn/docs/commands#clean">cache reset</a></em>)</td>
-</tr>
-<tr>
-<td><code>:category</code></td>
-<td>分类。如果文章没有分类，则是 <code>default_category</code> 配置信息。</td>
-</tr>
-</tbody></table>
-<p>您可在 <code>permalink_defaults</code> 参数下调整永久链接中各变量的默认值：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">en</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="示例" class="article-heading"><a href="#示例" class="headerlink" title="示例"></a>示例<a class="article-anchor" href="#示例" aria-hidden="true"></a></h3><p>假设 <code>source/_posts</code> 文件夹中有个 <code>hello-world.md</code>，包含以下内容：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="number">-07</span><span class="number">-14</span> <span class="number">17</span><span class="string">:01:34</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">foo</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">bar</span></span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>:year/:month/:day/:title/</code></td>
-<td>2013/07/14/hello-world/</td>
-</tr>
-<tr>
-<td><code>:year-:month-:day-:title.html</code></td>
-<td>2013-07-14-hello-world.html</td>
-</tr>
-<tr>
-<td><code>:category/:title</code></td>
-<td>foo/bar/hello-world</td>
-</tr>
-</tbody></table>
-<h3 id="多语种支持" class="article-heading"><a href="#多语种支持" class="headerlink" title="多语种支持"></a>多语种支持<a class="article-anchor" href="#多语种支持" aria-hidden="true"></a></h3><p>若要建立一个多语种的网站，您可修改 <code>new_post_name</code> 和 <code>permalink</code> 参数，如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:lang/:title.md</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:lang/:title/</span></span><br></pre></td></tr></table></figure>
-
-<p>当您建立新文章时，文章会被储存到：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"Hello World"</span> --lang tw</span><br><span class="line"><span class="comment"># =&gt; source/_posts/tw/Hello-World.md</span></span><br></pre></td></tr></table></figure>
-
-<p>而网址会是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;localhost:4000&#x2F;tw&#x2F;hello-world&#x2F;</span><br></pre></td></tr></table></figure>
-
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:10.242Z" itemprop="dateModified">上次更新：2020-03-03</time>
-                <a href="one-command-deployment.html" class="article-footer-prev" title="一键部署"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="themes.html" class="article-footer-next" title="主题"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/zh-cn/docs/permalinks.html';
-  var disqus_title = "永久链接（Permalinks）";
-  var disqus_config = function(){
-    this.language = 'zh';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%AF%AD%E7%A7%8D%E6%94%AF%E6%8C%81"><span class="toc-text">多语种支持</span></a></li></ol>
-              <a href="#" id="article-toc-top">回到顶部</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="setup.html" class="sidebar-link">建站</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a><strong class="sidebar-title">基本操作</strong><a href="writing.html" class="sidebar-link">写作</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><strong class="sidebar-title">部署</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">一键部署</a><strong class="sidebar-title">自定义</strong><a href="permalinks.html" class="sidebar-link current">永久链接</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link">插件</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>

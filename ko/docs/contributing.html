@@ -120,111 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Contributing</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/ko/docs/contributing.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>We welcome you to join the development of Hexo. 🤗</p>
-<h2 id="개발" class="article-heading"><a href="#개발" class="headerlink" title="개발"></a>개발<a class="article-anchor" href="#개발" aria-hidden="true"></a></h2><p>우리는 당신이 Hexo의 개발에 참여하는 것을 환영합니다. 이 문서는 당신의 개발 프로세스에 도움을 줄 겁니다.</p>
-<h3 id="시작하기-전에…" class="article-heading"><a href="#시작하기-전에…" class="headerlink" title="시작하기 전에…"></a>시작하기 전에…<a class="article-anchor" href="#시작하기-전에…" aria-hidden="true"></a></h3><p>아래의 코딩 스타일을 지켜주세요.</p>
-<ul>
-<li><a target="_blank" href="https://google.github.io/styleguide/jsguide.html" rel="external nofollow noreferrer noopener">Google JavaScript Style Guide</a>를 따릅니다.</li>
-<li>두 개의 공백을 사용한 soft-tab을 사용합니다.</li>
-<li>콤마로 시작하지 마세요.</li>
-</ul>
-<h3 id="워크플로우" class="article-heading"><a href="#워크플로우" class="headerlink" title="워크플로우"></a>워크플로우<a class="article-anchor" href="#워크플로우" aria-hidden="true"></a></h3><ol>
-<li><p>Fork <a target="_blank" href="https://github.com/hexojs/hexo" rel="external nofollow noreferrer noopener">hexojs/hexo</a>.</p>
-</li>
-<li><p>저장소를 당신의 컴퓨터에 clone하고 의존 사항들을 설치합니다.</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;hexo.git</span><br><span class="line">$ cd hexo</span><br><span class="line">$ npm install</span><br><span class="line">$ git submodule update --init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>기능 branch를 생성합니다.</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b new_feature</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>개발합니다.</p>
-</li>
-<li><p>Branch를 push합니다.</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin new_feature</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>변경사항에 대한 설명을 포함하여 Pull request를 생성합니다.</p>
-</li>
-</ol>
-<h3 id="공지사항" class="article-heading"><a href="#공지사항" class="headerlink" title="공지사항"></a>공지사항<a class="article-anchor" href="#공지사항" aria-hidden="true"></a></h3><ul>
-<li><p><code>package.json</code>의 version number는 수정하지 마세요.</p>
-</li>
-<li><p>당신의 Pull request는 테스트를 통과했을 때에만 merge됩니다. 반영하기 전에 test를 돌려보세요.</p>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm test</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="Updating-official-plugins" class="article-heading"><a href="#Updating-official-plugins" class="headerlink" title="Updating official-plugins"></a>Updating official-plugins<a class="article-anchor" href="#Updating-official-plugins" aria-hidden="true"></a></h2><p>Also, we welcome PR or issue to <a target="_blank" href="https://github.com/hexojs" rel="external nofollow noreferrer noopener">official-plugins</a>. 🤗</p>
-<h2 id="문서의-갱신" class="article-heading"><a href="#문서의-갱신" class="headerlink" title="문서의 갱신"></a>문서의 갱신<a class="article-anchor" href="#문서의-갱신" aria-hidden="true"></a></h2><p>Hexo 문서는 opensource이며 <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a>에서 소스 코드를 검색할 수 있습니다.</p>
-<h3 id="Workflow" class="article-heading"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow<a class="article-anchor" href="#Workflow" aria-hidden="true"></a></h3><ol>
-<li><p>Fork <a target="_blank" href="https://github.com/hexojs/site" rel="external nofollow noreferrer noopener">hexojs/site</a></p>
-</li>
-<li><p>저장소를 당신의 컴퓨터에 clone하고 의존 사항들을 설치합니다.</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;&lt;username&gt;&#x2F;site.git</span><br><span class="line">$ cd site</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>문서를 수정하세요. Server를 돌려서 실시간으로 확인할 수 있습니다.</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Branch를 push합니다.</p>
-</li>
-<li><p>당신의 변경사항에 대한 설명을 포함하여 Pull request를 생성합니다.</p>
-</li>
-</ol>
-<h3 id="번역" class="article-heading"><a href="#번역" class="headerlink" title="번역"></a>번역<a class="article-anchor" href="#번역" aria-hidden="true"></a></h3><ol>
-<li><code>source</code> 폴더 안에 새 언어에 대한 폴더를 생성하세요. (소문자로 생성하세요.)</li>
-<li><code>source</code> 폴더의 Markdown 및 템플릿 파일들을 새 언어 폴더에 복사하세요.</li>
-<li><code>source/_data/language.yml</code>에 새 언어를 추가하세요.</li>
-<li><code>themes/navy/languages</code>에 <code>en.yml</code> 파일을 복사하고 새 언어로 이름을 변경하세요. (소문자로 변경하세요.)</li>
-</ol>
-<h2 id="이슈-보고" class="article-heading"><a href="#이슈-보고" class="headerlink" title="이슈 보고"></a>이슈 보고<a class="article-anchor" href="#이슈-보고" aria-hidden="true"></a></h2><p>Hexo를 사용하다가 문제를 발견하면, <a href="troubleshooting.html">Troubleshooting</a>, <a target="_blank" href="https://github.com/hexojs/hexo/issues" rel="external nofollow noreferrer noopener">GitHub</a>, <a target="_blank" href="https://groups.google.com/group/hexo" rel="external nofollow noreferrer noopener">Google Group</a>에서 이슈에 대해 답을 찾아보세요. 만약 답이 없다면 Github에 문제를 보고해 주세요.</p>
-<ol>
-<li>문제 재현은 <a href="commands.html#Debug_mode">debug mode</a>에서 해주세요.</li>
-<li><code>hexo version</code>명령을 수행해서 버전 정보를 알려주세요.</li>
-<li>디버그 메시지와 버전 정보를 Github에 올려주세요.</li>
-</ol>
-
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.979Z" itemprop="dateModified">Last updated: 2020-03-03</time>
-                <a href="troubleshooting.html" class="article-footer-prev" title="Troubleshooting"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/ko/docs/contributing.html';
-  var disqus_title = "Contributing";
-  var disqus_config = function(){
-    this.language = 'ko';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B0%9C%EB%B0%9C"><span class="toc-text">개발</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90%E2%80%A6"><span class="toc-text">시작하기 전에…</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0"><span class="toc-text">워크플로우</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD"><span class="toc-text">공지사항</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Updating-official-plugins"><span class="toc-text">Updating official-plugins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AC%B8%EC%84%9C%EC%9D%98-%EA%B0%B1%EC%8B%A0"><span class="toc-text">문서의 갱신</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Workflow"><span class="toc-text">Workflow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EB%B2%88%EC%97%AD"><span class="toc-text">번역</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%9D%B4%EC%8A%88-%EB%B3%B4%EA%B3%A0"><span class="toc-text">이슈 보고</span></a></li></ol>
-              <a href="#" id="article-toc-top">Back to Top</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link current">Contributing</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>

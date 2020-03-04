@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scikit-ika.github.io/"/>
-  <updated>2020-03-03T19:07:09.967Z</updated>
+  <updated>2020-03-04T01:30:04.994Z</updated>
   <id>https://scikit-ika.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hoeffding tree with memory management is intergrated</title>
-    <link href="https://scikit-ika.github.io/news/2020/04/15/hoeffding-tree/"/>
-    <id>https://scikit-ika.github.io/news/2020/04/15/hoeffding-tree/</id>
-    <published>2020-04-15T00:00:00.000Z</published>
-    <updated>2020-03-03T19:07:09.967Z</updated>
+    <title>Auto Parameter Tuning is integrated</title>
+    <link href="https://scikit-ika.github.io/news/2020/04/01/meta-learning-is-integrated/"/>
+    <id>https://scikit-ika.github.io/news/2020/04/01/meta-learning-is-integrated/</id>
+    <published>2020-04-01T00:00:00.000Z</published>
+    <updated>2020-03-04T01:30:04.994Z</updated>
     
     <summary type="html">
     
@@ -32,11 +32,11 @@
   </entry>
   
   <entry>
-    <title>AutoML is integrated</title>
-    <link href="https://scikit-ika.github.io/news/2020/03/30/AutoML-is-integrated/"/>
-    <id>https://scikit-ika.github.io/news/2020/03/30/AutoML-is-integrated/</id>
-    <published>2020-03-30T00:00:00.000Z</published>
-    <updated>2020-03-03T19:07:09.967Z</updated>
+    <title>Happy birthday scikit-ika!</title>
+    <link href="https://scikit-ika.github.io/news/2020/03/01/happy-birthday-scikit-ika/"/>
+    <id>https://scikit-ika.github.io/news/2020/03/01/happy-birthday-scikit-ika/</id>
+    <published>2020-03-01T00:00:00.000Z</published>
+    <updated>2020-03-04T01:28:06.675Z</updated>
     
     <summary type="html">
     
@@ -63,10 +63,10 @@
   
   <entry>
     <title>scikit-ika is born</title>
-    <link href="https://scikit-ika.github.io/news/2019/12/22/scikit-ika-is-born/"/>
-    <id>https://scikit-ika.github.io/news/2019/12/22/scikit-ika-is-born/</id>
-    <published>2019-12-22T00:00:00.000Z</published>
-    <updated>2020-03-03T19:07:09.967Z</updated>
+    <link href="https://scikit-ika.github.io/news/2019/03/01/scikit-ika-is-born/"/>
+    <id>https://scikit-ika.github.io/news/2019/03/01/scikit-ika-is-born/</id>
+    <published>2019-03-01T00:00:00.000Z</published>
+    <updated>2020-03-04T01:27:46.958Z</updated>
     
     <summary type="html">
     

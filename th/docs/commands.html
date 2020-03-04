@@ -120,171 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Commands</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/th/docs/commands.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h2 id="init" class="article-heading"><a href="#init" class="headerlink" title="init"></a>init<a class="article-anchor" href="#init" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure>
-
-<p>initialize เว็บไซต์. ถ้าไม่ป่งชี้หรือสร้าง <code>folder</code> โดยเฉพาะ hexo<br>จะสร้างไฟล์ต่างๆอยู่ใน directory ปัจจุบัน</p>
-<h2 id="new" class="article-heading"><a href="#new" class="headerlink" title="new"></a>new<a class="article-anchor" href="#new" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>สร้างบทความใหม่.<br>ถ้าไม่ได้ตั้งค่าชั้ดเจน hexo จะใช้ <code>default_layout</code> ของไฟล์ <a href="configuration.html">_config.yml</a><br>ถ้า <code>title</code> ของบทความนั้นมี  space  จะต้องห่อ <code>title</code> นั้นด้วยเครื่องหมายอ้างอิง </p>
-<h2 id="generate" class="article-heading"><a href="#generate" class="headerlink" title="generate"></a>generate<a class="article-anchor" href="#generate" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>generate ไฟล์คงที่</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-d</code>, <code>--deploy</code></td>
-<td>Deploy after generation finishes</td>
-</tr>
-<tr>
-<td><code>-w</code>, <code>--watch</code></td>
-<td>Watch file changes</td>
-</tr>
-<tr>
-<td><code>-b</code>, <code>--bail</code></td>
-<td>Raise an error if any unhandled exception is thrown during generation</td>
-</tr>
-<tr>
-<td><code>-f</code>, <code>--force</code></td>
-<td>Force regenerate</td>
-</tr>
-</tbody></table>
-<h2 id="publish" class="article-heading"><a href="#publish" class="headerlink" title="publish"></a>publish<a class="article-anchor" href="#publish" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-
-<p>ประกาศ draft</p>
-<h2 id="server" class="article-heading"><a href="#server" class="headerlink" title="server"></a>server<a class="article-anchor" href="#server" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>เปิดเซร์ฟเวอร์ local   เซร์ฟเวอร์ local นั้นจะเป็น <code>http://localhost:4000/</code><br>by default</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-p</code>, <code>--port</code></td>
-<td>Override default port</td>
-</tr>
-<tr>
-<td><code>-s</code>, <code>--static</code></td>
-<td>Only serve static files</td>
-</tr>
-<tr>
-<td><code>-l</code>, <code>--log</code></td>
-<td>Enable logger. Override logger format.</td>
-</tr>
-</tbody></table>
-<h2 id="deploy" class="article-heading"><a href="#deploy" class="headerlink" title="deploy"></a>deploy<a class="article-anchor" href="#deploy" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>deploy เว็บไซต์ของคุณ</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-g</code>, <code>--generate</code></td>
-<td>Generate before deployment</td>
-</tr>
-</tbody></table>
-<h2 id="render" class="article-heading"><a href="#render" class="headerlink" title="render"></a>render<a class="article-anchor" href="#render" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo render &lt;file1&gt; [file2] ...</span><br></pre></td></tr></table></figure>
-
-<p>render ไฟล์ต่างๆ</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-o</code>, <code>--output</code></td>
-<td>Output destination</td>
-</tr>
-</tbody></table>
-<h2 id="migrate" class="article-heading"><a href="#migrate" class="headerlink" title="migrate"></a>migrate<a class="article-anchor" href="#migrate" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo migrate &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p><a href="migration.html">Migrates</a> เนื้อหาจากบล็อกอื่นๆ</p>
-<h2 id="clean" class="article-heading"><a href="#clean" class="headerlink" title="clean"></a>clean<a class="article-anchor" href="#clean" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>ลบไฟล์ cache (<code>db.json</code>) และ generate ไฟล์ (<code>public</code>)</p>
-<h2 id="list" class="article-heading"><a href="#list" class="headerlink" title="list"></a>list<a class="article-anchor" href="#list" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo list &lt;<span class="built_in">type</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>โชว์ route ทั้งหมด</p>
-<h2 id="version" class="article-heading"><a href="#version" class="headerlink" title="version"></a>version<a class="article-anchor" href="#version" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
-
-<p>โชว์ข้อมูลเวร์อชั่น</p>
-<h2 id="Options" class="article-heading"><a href="#Options" class="headerlink" title="Options"></a>Options<a class="article-anchor" href="#Options" aria-hidden="true"></a></h2><h3 id="Safe-mode" class="article-heading"><a href="#Safe-mode" class="headerlink" title="Safe mode"></a>Safe mode<a class="article-anchor" href="#Safe-mode" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --safe</span><br></pre></td></tr></table></figure>
-
-<p>ปิดปลั๊กอิน loading และ script ลองใช้โหมดนี้หลังพบปัญหาเมื่อติดตั้งปลั๊กอินใหม่</p>
-<h3 id="Debug-mode" class="article-heading"><a href="#Debug-mode" class="headerlink" title="Debug mode"></a>Debug mode<a class="article-anchor" href="#Debug-mode" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --debug</span><br></pre></td></tr></table></figure>
-
-<p>log ข้อมูลละเอียดไปถึง terminal และ <code>debug.log</code>  เมื่อเห็นข้อผิดพลาดใดๆอยู่ใน<br> log ไป<a target="_blank" href="https://github.com/hexojs/hexo/issues/new" rel="external nofollow noreferrer noopener">raise a GitHub issue</a>ได้</p>
-<h3 id="Silent-mode" class="article-heading"><a href="#Silent-mode" class="headerlink" title="Silent mode"></a>Silent mode<a class="article-anchor" href="#Silent-mode" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --silent</span><br></pre></td></tr></table></figure>
-
-<p>silence ผลไปถึง terminal</p>
-<h3 id="Customize-config-file-path" class="article-heading"><a href="#Customize-config-file-path" class="headerlink" title="Customize config file path"></a>Customize config file path<a class="article-anchor" href="#Customize-config-file-path" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --config custom.yml</span><br></pre></td></tr></table></figure>
-
-<p>ใช้ไฟล์การตั้งค่าของตน(แทน <code>_config.yml</code>) ถ้่าเป็นไฟล์หลายตัว<br>ไฟล์นั้นเป็นไฟล์ JSON หรือ YAML ได้<br>คุณต่องเขียนรายชื่อไฟล์พวกนี้อยู่ใน <code>_multiconfig.yml</code><br>และตัดแต่ละชื่อไฟล์ด้วยเครื่องหมายจุลภาค </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --config custom.yml,custom2.json</span><br></pre></td></tr></table></figure>
-
-<h3 id="Display-drafts" class="article-heading"><a href="#Display-drafts" class="headerlink" title="Display drafts"></a>Display drafts<a class="article-anchor" href="#Display-drafts" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --draft</span><br></pre></td></tr></table></figure>
-
-<p>โชว์โพสต์ท่ีเป็น draft (เก็บอยู่ใน folder <code>source/_drafts</code>)</p>
-<h3 id="Customize-CWD" class="article-heading"><a href="#Customize-CWD" class="headerlink" title="Customize CWD"></a>Customize CWD<a class="article-anchor" href="#Customize-CWD" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo --cwd /path/to/cwd</span><br></pre></td></tr></table></figure>
-
-<p>ตั้งค่า path ของ directory ท่ีใช่งานปัจจุบันด้วยตนเองได้</p>
-
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.998Z" itemprop="dateModified">Last updated: 2020-03-03</time>
-                <a href="configuration.html" class="article-footer-prev" title="Configuration"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="migration.html" class="article-footer-next" title="Migration"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/th/docs/commands.html';
-  var disqus_title = "Commands";
-  var disqus_config = function(){
-    this.language = 'th';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#init"><span class="toc-text">init</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#generate"><span class="toc-text">generate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#publish"><span class="toc-text">publish</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#deploy"><span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#render"><span class="toc-text">render</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#migrate"><span class="toc-text">migrate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clean"><span class="toc-text">clean</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list"><span class="toc-text">list</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#version"><span class="toc-text">version</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Options"><span class="toc-text">Options</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Safe-mode"><span class="toc-text">Safe mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Debug-mode"><span class="toc-text">Debug mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Silent-mode"><span class="toc-text">Silent mode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customize-config-file-path"><span class="toc-text">Customize config file path</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Display-drafts"><span class="toc-text">Display drafts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customize-CWD"><span class="toc-text">Customize CWD</span></a></li></ol></li></ol>
-              <a href="#" id="article-toc-top">Back to Top</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link current">Commands</a><a href="migration.html" class="sidebar-link">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>

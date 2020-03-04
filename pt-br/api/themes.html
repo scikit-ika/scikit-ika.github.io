@@ -120,61 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Temas</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/pt-br/api/themes.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Melhore esta Documentação"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>O <code>hexo.theme</code> herda de <a href="box.html">Box</a> e também guarda os templates.</p>
-<h2 id="Obter-uma-View" class="article-heading"><a href="#Obter-uma-View" class="headerlink" title="Obter uma View"></a>Obter uma View<a class="article-anchor" href="#Obter-uma-View" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.theme.getView(path);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Definir-uma-View" class="article-heading"><a href="#Definir-uma-View" class="headerlink" title="Definir uma View"></a>Definir uma View<a class="article-anchor" href="#Definir-uma-View" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.theme.setView(path, data);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Remover-uma-View" class="article-heading"><a href="#Remover-uma-View" class="headerlink" title="Remover uma View"></a>Remover uma View<a class="article-anchor" href="#Remover-uma-View" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.theme.removeView(path);</span><br></pre></td></tr></table></figure>
-
-<h2 id="View" class="article-heading"><a href="#View" class="headerlink" title="View"></a>View<a class="article-anchor" href="#View" aria-hidden="true"></a></h2><p>As Views têm dois métodos: <code>render</code> e <code>renderSync</code>. Esses dois métodos são idênticos, mas o primeiro é assíncrono e o segundo é síncrono. Por uma questão de simplicidade, só discutiremos <code>render</code> aqui.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> view = hexo.theme.getView(<span class="string">'layout.swig'</span>);</span><br><span class="line"></span><br><span class="line">view.render(&#123;<span class="attr">foo</span>: <span class="number">1</span>, <span class="attr">bar</span>: <span class="number">2</span>&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>Você pode passar opções para o método <code>render</code> e ele tentará processar o template com o renderizador correspondente e carregar os <a href="helper.html">helpers</a>. Quando a renderização estiver completa, ele tentará descobrir se existe um layout. Se <code>layout</code> for <code>false</code> ou se não existir, o resultado será retornado diretamente.</p>
-
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.985Z" itemprop="dateModified">Última Atualização: 2020-03-03</time>
-                <a href="scaffolds.html" class="article-footer-prev" title="Scaffolds"><i class="fa fa-chevron-left"></i><span>Anterior</span></a><a href="console.html" class="article-footer-next" title="Console"><span>Próximo</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/pt-br/api/themes.html';
-  var disqus_title = "Temas";
-  var disqus_config = function(){
-    this.language = 'pt-br';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">Conteúdo</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Obter-uma-View"><span class="toc-text">Obter uma View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Definir-uma-View"><span class="toc-text">Definir uma View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Remover-uma-View"><span class="toc-text">Remover uma View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View"><span class="toc-text">View</span></a></li></ol>
-              <a href="#" id="article-toc-top">Ir para o Topo</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Core</strong><a href="index.html" class="sidebar-link">Visão Geral</a><a href="events.html" class="sidebar-link">Events</a><a href="locals.html" class="sidebar-link">Variáveis Locais</a><a href="router.html" class="sidebar-link">Router</a><a href="box.html" class="sidebar-link">Box</a><a href="rendering.html" class="sidebar-link">Renderização</a><a href="posts.html" class="sidebar-link">Postagens</a><a href="scaffolds.html" class="sidebar-link">Scaffolds</a><a href="themes.html" class="sidebar-link current">Temas</a><strong class="sidebar-title">Extensões</strong><a href="console.html" class="sidebar-link">Console</a><a href="deployer.html" class="sidebar-link">Deployer</a><a href="filter.html" class="sidebar-link">Filter</a><a href="generator.html" class="sidebar-link">Generator</a><a href="helper.html" class="sidebar-link">Helper</a><a href="migrator.html" class="sidebar-link">Migrator</a><a href="processor.html" class="sidebar-link">Processor</a><a href="renderer.html" class="sidebar-link">Renderer</a><a href="tag.html" class="sidebar-link">Tag</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>

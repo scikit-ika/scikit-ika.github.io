@@ -120,66 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Internationalization (i18n)</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/th/docs/internationalization.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>คุณสามารถใช้ internationalization มาโชว์ไซต์ของคุณด้วยภาษาต่างๆ ภาษา dafault<br>ของไซต์นั้นแก้ไขได้ใน  <code>language</code> ของ <code>_config.yml</code><br>คุณยังตั้งค่าหลายภาษาและแก้ไขลำดับของภาษา default ได้เช่นกัน</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-tw</span></span><br><span class="line"></span><br><span class="line"><span class="attr">language:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">zh-tw</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">en</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Language-Files" class="article-heading"><a href="#Language-Files" class="headerlink" title="Language Files"></a>Language Files<a class="article-anchor" href="#Language-Files" aria-hidden="true"></a></h3><p>ไฟล์ของภาษาจะเป็นไฟล์ YAML หรือ JSON คุณต้องไลฟ์เหล่านี้อยู่ใน folder<br><code>language</code> ของธีม สำหรับข้อมูลเพิ่มเติมของไฟล์ภาษา ไปดูได้ท่ี <a target="_blank" href="https://github.com/alexei/sprintf.js" rel="external nofollow noreferrer noopener">printf format</a></p>
-<h3 id="Templates" class="article-heading"><a href="#Templates" class="headerlink" title="Templates"></a>Templates<a class="article-anchor" href="#Templates" aria-hidden="true"></a></h3><p>คุณใช้ helper ของ <code>__</code> หรือ <code>_p</code> ใน template ได้เพื่อได้  string ท่ีแปลมาแล้ว<br> ตัวแรกใช้ในกรณีทางการ ส่วนตัวหลังใช้ในกรณีท่ีมีหลาย string ยกตัวอย่างเช่น：<br>、</p>
-<figure class="highlight yaml"><figcaption><span>en.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">index:</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">Home</span></span><br><span class="line">  <span class="attr">add:</span> <span class="string">Add</span></span><br><span class="line">  <span class="attr">video:</span></span><br><span class="line">    <span class="attr">zero:</span> <span class="literal">No</span> <span class="string">videos</span></span><br><span class="line">    <span class="attr">one:</span> <span class="string">One</span> <span class="string">video</span></span><br><span class="line">    <span class="attr">other:</span> <span class="string">%d</span> <span class="string">videos</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;%= __(<span class="string">'index.title'</span>) %&gt;</span><br><span class="line"><span class="comment">// Home</span></span><br><span class="line"></span><br><span class="line">&lt;%= _p(<span class="string">'index.video'</span>, <span class="number">3</span>) %&gt;</span><br><span class="line"><span class="comment">// 3 videos</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Path" class="article-heading"><a href="#Path" class="headerlink" title="Path"></a>Path<a class="article-anchor" href="#Path" aria-hidden="true"></a></h3><p>คุณสามารถตั้งค่าภาษาของเพจได้ใน front-matter หรือแก้ไขการตั้งค่า  <code>i18n_dir</code><br>ได้ใน <code>_config.yml</code> เพื่อ enable การเฝ้าดูไฟล์ของ hexo</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br></pre></td></tr></table></figure>
-
-<p>default value ของการตั้งค่า  <code>i18n_dir</code> คือ <code>:lang</code> ซึ่งหมายความว่า hexo<br>จะสืบค้นภาษาท่ีอยู่ใน segment ตัวแรกของ URL ยกตัวอย่างเช่น：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;index.html &#x3D;&gt; en</span><br><span class="line">&#x2F;archives&#x2F;index.html &#x3D;&gt; en</span><br><span class="line">&#x2F;zh-tw&#x2F;index.html &#x3D;&gt; zh-tw</span><br></pre></td></tr></table></figure>
-
-<p>string นั้นจะมีผลได้ในแต่กรณีท่ีไลฟ์ภาษานั้นมีอยู่จริงๆ ดังนั้น <code>archives</code> ใน<br> <code>/archives/index.html</code> (ตัวอย่างท่ีสอง) จะไม่เกิดผลในการตั้งค่าภาษาของเว็บไซต์</p>
-
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.999Z" itemprop="dateModified">Last updated: 2020-03-03</time>
-                <a href="helpers.html" class="article-footer-prev" title="Helpers"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="plugins.html" class="article-footer-next" title="Plugins"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/th/docs/internationalization.html';
-  var disqus_title = "Internationalization (i18n)";
-  var disqus_config = function(){
-    this.language = 'th';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Language-Files"><span class="toc-text">Language Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Templates"><span class="toc-text">Templates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Path"><span class="toc-text">Path</span></a></li></ol>
-              <a href="#" id="article-toc-top">Back to Top</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link current">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>

@@ -120,89 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Documentação</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/pt-br/docs/index.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Melhore esta Documentação"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Bem-vindo à documentação do Hexo. Se você encontrar algum problema ao usar o Hexo, dê uma olhada no  <a href="troubleshooting.html">guia de solução de problemas</a>, abra uma issue no <a target="_blank" href="https://github.com/hexojs/hexo/issues" rel="external nofollow noreferrer noopener">GitHub</a> ou inicie um tópico no <a target="_blank" href="https://groups.google.com/group/hexo" rel="external nofollow noreferrer noopener">Google Group</a>.</p>
-<h2 id="O-que-e-o-Hexo" class="article-heading"><a href="#O-que-e-o-Hexo" class="headerlink" title="O que é o Hexo?"></a>O que é o Hexo?<a class="article-anchor" href="#O-que-e-o-Hexo" aria-hidden="true"></a></h2><p>O Hexo é uma ferramenta simples, rápida e poderosa para criação blog. Você escreve postagens em <a target="_blank" href="http://daringfireball.net/projects/markdown/" rel="external nofollow noreferrer noopener">Markdown</a> (ou outras linguagens) e o Hexo gera arquivos estáticos com um lindo tema em segundos.</p>
-<h2 id="Instalacao" class="article-heading"><a href="#Instalacao" class="headerlink" title="Instalação"></a>Instalação<a class="article-anchor" href="#Instalacao" aria-hidden="true"></a></h2><p>Demora apenas alguns minutos para configurar o Hexo. Se você encontrar um problema e não conseguir encontrar a solução aqui, por favor <a target="_blank" href="https://github.com/hexojs/hexo/issues" rel="external nofollow noreferrer noopener">abra uma issue no GitHub</a> e vamos tentar resolvê-lo.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/ARted4RniaU" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<h3 id="Requerimentos" class="article-heading"><a href="#Requerimentos" class="headerlink" title="Requerimentos"></a>Requerimentos<a class="article-anchor" href="#Requerimentos" aria-hidden="true"></a></h3><p>Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras coisas instaladas primeiro:</p>
-<ul>
-<li><a target="_blank" href="http://nodejs.org/" rel="external nofollow noreferrer noopener">Node.js</a> (Should be at least Node.js 8.10, recommends 10.0 or higher)</li>
-<li><a target="_blank" href="http://git-scm.com/" rel="external nofollow noreferrer noopener">Git</a></li>
-</ul>
-<p>Se o seu computador já possui estes, parabéns! Basta instalar o Hexo com o npm:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>Caso contrário, siga as instruções a seguir para instalar todos os requisitos.</p>
-<blockquote class="note warn"><strong class="note-title">Para usuários Mac</strong><p>Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store primeiro. Depois que o Xcode estiver instalado, abra o Xcode e vá para <strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong> para instalar as ferramentas de linhas de comandos.</p>
-</blockquote>
-
-<h3 id="Instalando-o-Git" class="article-heading"><a href="#Instalando-o-Git" class="headerlink" title="Instalando o Git"></a>Instalando o Git<a class="article-anchor" href="#Instalando-o-Git" aria-hidden="true"></a></h3><ul>
-<li>Windows: Download e instalação do <a target="_blank" href="https://git-scm.com/download/win" rel="external nofollow noreferrer noopener">Git</a>.</li>
-<li>Mac: Intalação com o <a target="_blank" href="http://mxcl.github.com/homebrew/" rel="external nofollow noreferrer noopener">Homebrew</a>, <a target="_blank" href="http://www.macports.org/" rel="external nofollow noreferrer noopener">MacPorts</a> ou <a target="_blank" href="http://sourceforge.net/projects/git-osx-installer/" rel="external nofollow noreferrer noopener">installer</a>.</li>
-<li>Linux (Ubuntu, Debian): <code>sudo apt-get install git-core</code></li>
-<li>Linux (Fedora, Red Hat, CentOS): <code>sudo yum install git-core</code></li>
-</ul>
-<h3 id="Instalando-o-Node-js" class="article-heading"><a href="#Instalando-o-Node-js" class="headerlink" title="Instalando o Node.js"></a>Instalando o Node.js<a class="article-anchor" href="#Instalando-o-Node-js" aria-hidden="true"></a></h3><p>A melhor maneira de instalar o Node.js é com o <a target="_blank" href="https://github.com/nvm-sh/nvm" rel="external nofollow noreferrer noopener">Node Version Manager</a>.<br>Felizmente, os criadores do nvm fornecem um script simples que instala automaticamente o nvm:</p>
-<p>cURL:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</span><br></pre></td></tr></table></figure>
-
-<p>Wget:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</span><br></pre></td></tr></table></figure>
-
-<p>Uma vez que o nvm esteja instalado, reinicie o terminal e execute o seguinte comando para instalar o Node.js:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ nvm install node</span><br></pre></td></tr></table></figure>
-
-<blockquote class="note info"><strong class="note-title">For Windows users</strong><p>We recommend to use <a target="_blank" href="https://github.com/jasongin/nvs/" rel="external nofollow noreferrer noopener">Node Version Switcher</a> as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.</p>
-</blockquote>
-
-<p>Alternativamente, é possível baixar e executar <a target="_blank" href="http://nodejs.org/" rel="external nofollow noreferrer noopener">o instalador do Node.js</a>.</p>
-<h3 id="Instalando-Hexo" class="article-heading"><a href="#Instalando-Hexo" class="headerlink" title="Instalando Hexo"></a>Instalando Hexo<a class="article-anchor" href="#Instalando-Hexo" aria-hidden="true"></a></h3><p>Uma vez que todos os requisitos estão instalados, você pode instalar o Hexo com npm:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.987Z" itemprop="dateModified">Última Atualização: 2020-03-03</time>
-                <a href="setup.html" class="article-footer-next" title="Setup"><span>Próximo</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/pt-br/docs/index.html';
-  var disqus_title = "Documentação";
-  var disqus_config = function(){
-    this.language = 'pt-br';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">Conteúdo</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#O-que-e-o-Hexo"><span class="toc-text">O que é o Hexo?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Instalacao"><span class="toc-text">Instalação</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Requerimentos"><span class="toc-text">Requerimentos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Instalando-o-Git"><span class="toc-text">Instalando o Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Instalando-o-Node-js"><span class="toc-text">Instalando o Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Instalando-Hexo"><span class="toc-text">Instalando Hexo</span></a></li></ol></li></ol>
-              <a href="#" id="article-toc-top">Ir para o Topo</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Começando</strong><a href="index.html" class="sidebar-link current">Visão Geral</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuração</a><a href="commands.html" class="sidebar-link">Comandos</a><a href="migration.html" class="sidebar-link">Migração</a><strong class="sidebar-title">Uso Básico</strong><a href="writing.html" class="sidebar-link">Escrevendo</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Diretórios de Recursos</a><a href="data-files.html" class="sidebar-link">Arquivos de Dados</a><a href="server.html" class="sidebar-link">Servidor</a><a href="generating.html" class="sidebar-link">Gerando</a><strong class="sidebar-title">Implantação</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customização</strong><a href="permalinks.html" class="sidebar-link">Links Permanentes</a><a href="themes.html" class="sidebar-link">Temas</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variáveis</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internacionalização (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscelânea</strong><a href="troubleshooting.html" class="sidebar-link">Soluções de Problemas</a><a href="contributing.html" class="sidebar-link">Contribuindo</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>

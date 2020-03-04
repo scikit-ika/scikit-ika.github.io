@@ -120,68 +120,28 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Рендеринг</h1>
-                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/ru/api/rendering.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Предложить улучшение"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
+                <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>Существует два метода обработки файлов или строк для рендеринга: асинхронный <code>hexo.render.render</code> и синхронный <code>hexo.render.renderSync</code>. Нет ничего удивительного в похожести этих методов. Ниже описываются только асинхронные методы.</p>
-<h2 id="Обработка-строки" class="article-heading"><a href="#Обработка-строки" class="headerlink" title="Обработка строки"></a>Обработка строки<a class="article-anchor" href="#Обработка-строки" aria-hidden="true"></a></h2><p>При рендеринге строки Hexo необходимо указать, каким обработчиком (<code>engine</code>) её обрабатывать.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.render.render(&#123;<span class="attr">text</span>: <span class="string">'example'</span>, <span class="attr">engine</span>: <span class="string">'swig'</span>&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Обработка-файла" class="article-heading"><a href="#Обработка-файла" class="headerlink" title="Обработка файла"></a>Обработка файла<a class="article-anchor" href="#Обработка-файла" aria-hidden="true"></a></h2><p>При обработке файла не нужно указывать <code>engine</code>, потому что Hexo сам обнаружит соответствующий рендер автоматически в зависимости от расширения файла. Конечно, возможно и явно задать обработчик.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.render.render(&#123;<span class="attr">path</span>: <span class="string">'path/to/file.swig'</span>&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Опции-обработчика" class="article-heading"><a href="#Опции-обработчика" class="headerlink" title="Опции обработчика"></a>Опции обработчика<a class="article-anchor" href="#Опции-обработчика" aria-hidden="true"></a></h2><p>Можно задать опции в качестве второго аргумента.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.render.render(&#123;<span class="attr">text</span>: <span class="string">''</span>&#125;, &#123;<span class="attr">foo</span>: <span class="string">'foo'</span>&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Фильтр-after-render" class="article-heading"><a href="#Фильтр-after-render" class="headerlink" title="Фильтр after_render"></a>Фильтр after_render<a class="article-anchor" href="#Фильтр-after-render" aria-hidden="true"></a></h2><p>При окончании обработки Hexo выполнит соответствующие фильтры, заданные в переменной <code>after_render</code>. Например, эта функция запустит минификацию JavaScript’а.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> UglifyJS = <span class="built_in">require</span>(<span class="string">'uglify-js'</span>);</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_render:js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">str, data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> result = UglifyJS.minify(str);</span><br><span class="line">  <span class="keyword">return</span> result.code;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Проверка-существует-ли-обработчик-для-типа-файла" class="article-heading"><a href="#Проверка-существует-ли-обработчик-для-типа-файла" class="headerlink" title="Проверка, существует ли обработчик для типа файла"></a>Проверка, существует ли обработчик для типа файла<a class="article-anchor" href="#Проверка-существует-ли-обработчик-для-типа-файла" aria-hidden="true"></a></h2><p>Можно использовать метод <code>isRenderable</code> или <code>isRenderableSync</code> для проверки, зарегистрирован ли обработчик для типа файла. Только когда соответствующий обработчик был зарегистрирован, будет возвращёно значение <code>true</code>.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.render.isRenderable(<span class="string">'layout.swig'</span>) <span class="comment">// true</span></span><br><span class="line">hexo.render.isRenderable(<span class="string">'image.png'</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Определение-расширения-на-выходе" class="article-heading"><a href="#Определение-расширения-на-выходе" class="headerlink" title="Определение расширения на выходе"></a>Определение расширения на выходе<a class="article-anchor" href="#Определение-расширения-на-выходе" aria-hidden="true"></a></h2><p>Метод <code>getOutput</code> получает расширение на выходе обработчика. Если передать необрабатываемый файл, то обработчик вернёт пустую строку.</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.render.getOutput(<span class="string">'layout.swig'</span>) <span class="comment">// html</span></span><br><span class="line">hexo.render.getOutput(<span class="string">'image.png'</span>) <span class="comment">// '''</span></span><br></pre></td></tr></table></figure>
-
+                {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.991Z" itemprop="dateModified">Последнее обновление: 2020-03-03</time>
-                <a href="box.html" class="article-footer-prev" title="Модуль"><i class="fa fa-chevron-left"></i><span>Пред</span></a><a href="posts.html" class="article-footer-next" title="Посты"><span>След</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="{{ date_xml(page.updated) }}" itemprop="dateModified">{{ __('page.last_updated', date(page.updated)) }}</time>
+                {{ page_nav() }}
               </footer>
-              
-<section id="comments">
-  <div id="disqus_thread"></div>
-</section>
-<script>
-  var disqus_shortname = 'scikitika';
-  var disqus_url = 'https://scikit-ika.github.io/ru/api/rendering.html';
-  var disqus_title = "Рендеринг";
-  var disqus_config = function(){
-    this.language = 'ru';
-  };
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = 'https://go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">Содержание</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8"><span class="toc-text">Обработка строки</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0"><span class="toc-text">Обработка файла</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%BF%D1%86%D0%B8%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0"><span class="toc-text">Опции обработчика</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80-after-render"><span class="toc-text">Фильтр after_render</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D0%B5%D1%82-%D0%BB%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D1%82%D0%B8%D0%BF%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0"><span class="toc-text">Проверка, существует ли обработчик для типа файла</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-%D0%B2%D1%8B%D1%85%D0%BE%D0%B4%D0%B5"><span class="toc-text">Определение расширения на выходе</span></a></li></ol>
-              <a href="#" id="article-toc-top">Наверх</a>
+              <strong class="sidebar-title">{{ __('page.contents') }}</strong>
+              {{ toc(page.content, {list_number: false}) }}
+              <a href="#" id="article-toc-top">{{ __('page.back_to_top') }}</a>
             </div>
           </aside>
         </div>
       </article>
-      <aside id="sidebar" role="navigation">
-  <div class="inner">
-    <strong class="sidebar-title">Ядро</strong><a href="index.html" class="sidebar-link">Обзор</a><a href="events.html" class="sidebar-link">События</a><a href="locals.html" class="sidebar-link">Переменные</a><a href="router.html" class="sidebar-link">Маршруты</a><a href="box.html" class="sidebar-link">Модуль</a><a href="rendering.html" class="sidebar-link current">Рендеринг</a><a href="posts.html" class="sidebar-link">Посты</a><a href="scaffolds.html" class="sidebar-link">Заготовки</a><a href="themes.html" class="sidebar-link">Темы</a><strong class="sidebar-title">Расширения</strong><a href="console.html" class="sidebar-link">Консоль</a><a href="deployer.html" class="sidebar-link">Инструмент размещения</a><a href="filter.html" class="sidebar-link">Фильтр</a><a href="generator.html" class="sidebar-link">Генератор</a><a href="helper.html" class="sidebar-link">Помошник</a><a href="migrator.html" class="sidebar-link">Мигратор</a><a href="processor.html" class="sidebar-link">Обработчик</a><a href="renderer.html" class="sidebar-link">Рендер</a><a href="tag.html" class="sidebar-link">Тег</a>
-  </div>
-</aside>
+      {{ partial('partial/sidebar') }}
     </div>
   </div>
 </div>
