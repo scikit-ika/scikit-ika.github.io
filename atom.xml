@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scikit-ika.github.io/"/>
-  <updated>2020-03-04T01:30:04.994Z</updated>
+  <updated>2020-05-12T08:38:10.774Z</updated>
   <id>https://scikit-ika.github.io/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Auto Parameter Tuning is integrated</title>
-    <link href="https://scikit-ika.github.io/news/2020/04/01/meta-learning-is-integrated/"/>
-    <id>https://scikit-ika.github.io/news/2020/04/01/meta-learning-is-integrated/</id>
+    <title>PEARL is presented in PAKDD 2020</title>
+    <link href="https://scikit-ika.github.io/news/2020/05/13/pakdd/"/>
+    <id>https://scikit-ika.github.io/news/2020/05/13/pakdd/</id>
+    <published>2020-05-13T00:00:00.000Z</published>
+    <updated>2020-05-12T08:38:10.774Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Integration of Auto Parameter Tuning has started</title>
+    <link href="https://scikit-ika.github.io/news/2020/04/01/start-integrating-meta-learning/"/>
+    <id>https://scikit-ika.github.io/news/2020/04/01/start-integrating-meta-learning/</id>
     <published>2020-04-01T00:00:00.000Z</published>
-    <updated>2020-03-04T01:30:04.994Z</updated>
+    <updated>2020-05-12T08:35:59.817Z</updated>
     
     <summary type="html">
     
