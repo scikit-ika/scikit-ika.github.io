@@ -1,14 +1,247 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
-{{ partial('partial/head') }}
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>GitHub Pages | scikit-ika</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://scikit-ika.github.io/docs/github-pages.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://scikit-ika.github.io/docs/github-pages">
+    
+      <link rel="alternative" hreflang="zh-tw" href="https://scikit-ika.github.io/zh-tw/docs/github-pages">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://scikit-ika.github.io/zh-cn/docs/github-pages">
+    
+      <link rel="alternative" hreflang="ru" href="https://scikit-ika.github.io/ru/docs/github-pages">
+    
+      <link rel="alternative" hreflang="ko" href="https://scikit-ika.github.io/ko/docs/github-pages">
+    
+      <link rel="alternative" hreflang="pt-br" href="https://scikit-ika.github.io/pt-br/docs/github-pages">
+    
+      <link rel="alternative" hreflang="th" href="https://scikit-ika.github.io/th/docs/github-pages">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-lato@0.0.75/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="scikit-ika" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="In this tutorial, we use Travis CI to deploy Github Pages. It is free for open source repository, meaning your repository’s master branch has to be public. Please skip to the Private repository sectio">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GitHub Pages">
+<meta property="og:url" content="https://scikit-ika.github.io/docs/github-pages">
+<meta property="og:site_name" content="scikit-ika">
+<meta property="og:description" content="In this tutorial, we use Travis CI to deploy Github Pages. It is free for open source repository, meaning your repository’s master branch has to be public. Please skip to the Private repository sectio">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-03T19:07:09.972Z">
+<meta property="article:modified_time" content="2020-03-03T19:07:09.972Z">
+<meta property="article:author" content="Team scikit-ika">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="scikit-ika">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48498357-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6482217598104186",
+          enable_page_level_ads: true
+     });
+  </script>
+</head>
+
 <body>
   <div id="container">
-    {{ partial('partial/header') }}
-    {{ body }}
-    {{ partial('partial/footer') }}
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/scikit-ika/" class="main-nav-link">Docs</a><a href="/news/" class="main-nav-link">News</a><a href="/about/" class="main-nav-link">About</a>
+      <a target="_blank" href="https://github.com/scikit-ika/scikit-ika" rel="external nofollow noreferrer noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">GitHub Pages</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/docs/github-pages.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>In this tutorial, we use <a target="_blank" href="https://travis-ci.com/" rel="external nofollow noreferrer noopener">Travis CI</a> to deploy Github Pages. It is free for open source repository, meaning your repository’s <code>master</code> branch has to be public. Please skip to the <a href="#Private-repository">Private repository</a> section if you prefer to keep the repo private, or prefer not to upload your source folder to GitHub.</p>
+<ol>
+<li>Create a repo named <b><em>username</em>.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead.</li>
+<li>Push the files of your Hexo folder to the repository. The <code>public/</code> folder is not (and should not be) uploaded by default, make sure the <code>.gitignore</code> file contains <code>public/</code> line. The folder structure should be roughly similar to <a target="_blank" href="https://github.com/hexojs/hexo-starter" rel="external nofollow noreferrer noopener">this repo</a>, without the <code>.gitmodules</code> file.</li>
+<li>Add <a target="_blank" href="https://github.com/marketplace/travis-ci" rel="external nofollow noreferrer noopener">Travis CI</a> to your account.</li>
+<li>Go to <a target="_blank" href="https://github.com/settings/installations" rel="external nofollow noreferrer noopener">Applications settings</a>, configure Travis CI to have access to the repo.</li>
+<li>You’ll be redirected to Travis page.</li>
+<li>On a new tab, generate a <a target="_blank" href="https://github.com/settings/tokens" rel="external nofollow noreferrer noopener">new token</a> with <strong>repo</strong> scopes. Note down the token value.</li>
+<li>On the Travis page, go to your repo’s setting. Under <strong>Environment Variables</strong>, put <strong>GH_TOKEN</strong> as name and paste the token onto value. Click Add to save it.</li>
+<li>Add <code>.travis.yml</code> file to your repo (alongside _config.yml &amp; package.json) with the following content:<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sudo:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">10</span> <span class="comment"># use nodejs v10 LTS</span></span><br><span class="line"><span class="attr">cache:</span> <span class="string">npm</span></span><br><span class="line"><span class="attr">branches:</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span> <span class="comment"># build master branch only</span></span><br><span class="line"><span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span> <span class="comment"># generate static files</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="attr">skip-cleanup:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github-token:</span> <span class="string">$GH_TOKEN</span></span><br><span class="line">  <span class="attr">keep-history:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">on:</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">local-dir:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure></li>
+<li>Once Travis CI finish the deployment, the generated pages can be found in the <code>gh-pages</code> branch of your repository</li>
+<li>In your GitHub repo’s setting, navigate to “GitHub Pages” section and change Source to <strong>gh-pages branch</strong>.</li>
+<li>Check the webpage at <em>username</em>.github.io.</li>
+</ol>
+<h2 id="Project-page" class="article-heading"><a href="#Project-page" class="headerlink" title="Project page"></a>Project page<a class="article-anchor" href="#Project-page" aria-hidden="true"></a></h2><p>If you prefer to have a project page on GitHub:</p>
+<ol>
+<li>Navigate to your repo on GitHub. Go to the <strong>Settings</strong> tab. Change the <strong>Repository name</strong> so your blog is available at <b>username.github.io/<em>repository</em></b>,  <strong>repository</strong> can be any name, like <em>blog</em> or <em>hexo</em>.</li>
+<li>Edit your <strong>_config.yml</strong>, change the <code>root:</code> value to the <code>/&lt;repository&gt;/</code> (must starts and ends with a slash, without the brackets).</li>
+<li>Commit and push.</li>
+</ol>
+<h2 id="Private-repository" class="article-heading"><a href="#Private-repository" class="headerlink" title="Private repository"></a>Private repository<a class="article-anchor" href="#Private-repository" aria-hidden="true"></a></h2><p>The following instruction is adapted from <a href="/docs/one-command-deployment">one-command deployment</a> page.</p>
+<ol>
+<li><p>Install <a target="_blank" href="https://github.com/hexojs/hexo-deployer-git" rel="external nofollow noreferrer noopener">hexo-deployer-git</a>.</p>
+</li>
+<li><p>Add the following configurations to <strong>_config.yml</strong>, (remove existing lines if any)</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line">  <span class="comment"># example, https://github.com/hexojs/hexojs.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Run <code>hexo clean &amp;&amp; hexo deploy</code>.</p>
+</li>
+<li><p>Check the webpage at <em>username</em>.github.io.</p>
+</li>
+</ol>
+<h2 id="Useful-links" class="article-heading"><a href="#Useful-links" class="headerlink" title="Useful links"></a>Useful links<a class="article-anchor" href="#Useful-links" aria-hidden="true"></a></h2><ul>
+<li><a target="_blank" href="https://help.github.com/categories/github-pages-basics/" rel="external nofollow noreferrer noopener">GitHub Pages</a></li>
+<li><a target="_blank" href="https://docs.travis-ci.com/user/tutorial/" rel="external nofollow noreferrer noopener">Travis CI Docs</a></li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.972Z" itemprop="dateModified">Last updated: 2020-03-03</time>
+                <a href="generating.html" class="article-footer-prev" title="Generating"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="gitlab-pages.html" class="article-footer-next" title="GitLab Pages"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Project-page"><span class="toc-text">Project page</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Private-repository"><span class="toc-text">Private repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Useful-links"><span class="toc-text">Useful links</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link current">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2020 <a href="https://github.com/scikit-ika/scikit-ika/graphs/contributors" rel="external nofollow noreferrer" target="_blank">Team scikit-ika</a><br>
+      Documentation licensed under <a href="https://github.com/scikit-ika/scikit-ika/blob/master/LICENSE" rel="external nofollow noreferrer" target="_blank">BSD 3-Clause</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://github.com/scikit-ika/scikit-ika" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
   </div>
   <div id="mobile-nav-dimmer"></div>
-  {{ partial('partial/mobile_nav') }}
-  {{ partial('partial/after_footer') }}
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/scikit-ika/" class="mobile-nav-link">Docs</a><a href="/news/" class="mobile-nav-link">News</a><a href="/about/" class="mobile-nav-link">About</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/scikit-ika/scikit-ika" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">Getting Started</strong><a href="index.html" class="mobile-nav-link">Overview</a><a href="setup.html" class="mobile-nav-link">Setup</a><a href="configuration.html" class="mobile-nav-link">Configuration</a><a href="commands.html" class="mobile-nav-link">Commands</a><a href="migration.html" class="mobile-nav-link">Migration</a><strong class="mobile-nav-title">Basic Usage</strong><a href="writing.html" class="mobile-nav-link">Writing</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">Tag Plugins</a><a href="asset-folders.html" class="mobile-nav-link">Asset Folders</a><a href="data-files.html" class="mobile-nav-link">Data Files</a><a href="server.html" class="mobile-nav-link">Server</a><a href="generating.html" class="mobile-nav-link">Generating</a><strong class="mobile-nav-title">Deployment</strong><a href="github-pages.html" class="mobile-nav-link current">GitHub Pages</a><a href="gitlab-pages.html" class="mobile-nav-link">GitLab Pages</a><a href="one-command-deployment.html" class="mobile-nav-link">One-Command Deployment</a><strong class="mobile-nav-title">Customization</strong><a href="permalinks.html" class="mobile-nav-link">Permalinks</a><a href="themes.html" class="mobile-nav-link">Themes</a><a href="templates.html" class="mobile-nav-link">Templates</a><a href="variables.html" class="mobile-nav-link">Variables</a><a href="helpers.html" class="mobile-nav-link">Helpers</a><a href="internationalization.html" class="mobile-nav-link">Internationalization (i18n)</a><a href="plugins.html" class="mobile-nav-link">Plugins</a><strong class="mobile-nav-title">Miscellaneous</strong><a href="troubleshooting.html" class="mobile-nav-link">Troubleshooting</a><a href="contributing.html" class="mobile-nav-link">Contributing</a>
+    
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('off');
+docsearch({
+  apiKey: 'c3d5d4c995b5e0c2ffb5623900279a66',
+  indexName: 'hexo',
+  inputSelector: '#search-input'
+});
+</script>
+
+
 </body>
 </html>

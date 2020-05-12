@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/variables</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/troubleshooting</loc>
     
     <lastmod>2020-03-03T19:07:10.250Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/troubleshooting</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/variables</loc>
     
     <lastmod>2020-03-03T19:07:10.250Z</lastmod>
     
@@ -79,6 +79,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/plugins</loc>
+    
+    <lastmod>2020-03-03T19:07:10.249Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/zh-tw/docs/permalinks</loc>
     
     <lastmod>2020-03-03T19:07:10.249Z</lastmod>
@@ -86,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/plugins</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/setup</loc>
     
     <lastmod>2020-03-03T19:07:10.249Z</lastmod>
     
@@ -107,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/setup</loc>
-    
-    <lastmod>2020-03-03T19:07:10.249Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/zh-tw/docs/templates</loc>
     
     <lastmod>2020-03-03T19:07:10.249Z</lastmod>
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/helpers</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/</loc>
     
     <lastmod>2020-03-03T19:07:10.248Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/helpers</loc>
     
     <lastmod>2020-03-03T19:07:10.248Z</lastmod>
     
@@ -156,21 +156,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/front-matter</loc>
-    
-    <lastmod>2020-03-03T19:07:10.247Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/data-files</loc>
-    
-    <lastmod>2020-03-03T19:07:10.247Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/zh-tw/docs/contributing</loc>
+    
+    <lastmod>2020-03-03T19:07:10.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/front-matter</loc>
     
     <lastmod>2020-03-03T19:07:10.247Z</lastmod>
     
@@ -184,7 +177,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/gitlab-pages</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/data-files</loc>
     
     <lastmod>2020-03-03T19:07:10.247Z</lastmod>
     
@@ -198,21 +191,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/router</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/gitlab-pages</loc>
     
-    <lastmod>2020-03-03T19:07:10.246Z</lastmod>
+    <lastmod>2020-03-03T19:07:10.247Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://scikit-ika.github.io/zh-tw/api/scaffolds</loc>
-    
-    <lastmod>2020-03-03T19:07:10.246Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/themes</loc>
     
     <lastmod>2020-03-03T19:07:10.246Z</lastmod>
     
@@ -226,7 +212,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/asset-folders</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/api/router</loc>
+    
+    <lastmod>2020-03-03T19:07:10.246Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/zh-tw/api/themes</loc>
     
     <lastmod>2020-03-03T19:07:10.246Z</lastmod>
     
@@ -240,16 +233,16 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/docs/configuration</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/asset-folders</loc>
     
     <lastmod>2020-03-03T19:07:10.246Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/helper</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/docs/configuration</loc>
     
-    <lastmod>2020-03-03T19:07:10.245Z</lastmod>
+    <lastmod>2020-03-03T19:07:10.246Z</lastmod>
     
   </url>
   
@@ -261,14 +254,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/posts</loc>
-    
-    <lastmod>2020-03-03T19:07:10.245Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/migrator</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/api/helper</loc>
     
     <lastmod>2020-03-03T19:07:10.245Z</lastmod>
     
@@ -282,7 +268,21 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/zh-tw/api/migrator</loc>
+    
+    <lastmod>2020-03-03T19:07:10.245Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/zh-tw/api/processor</loc>
+    
+    <lastmod>2020-03-03T19:07:10.245Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/zh-tw/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:10.245Z</lastmod>
     
@@ -310,7 +310,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/deployer</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/api/console</loc>
     
     <lastmod>2020-03-03T19:07:10.244Z</lastmod>
     
@@ -324,14 +324,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/console</loc>
-    
-    <lastmod>2020-03-03T19:07:10.244Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/zh-tw/api/generator</loc>
+    <loc>https://scikit-ika.github.io/zh-tw/api/deployer</loc>
     
     <lastmod>2020-03-03T19:07:10.244Z</lastmod>
     
@@ -346,6 +339,13 @@
   
   <url>
     <loc>https://scikit-ika.github.io/zh-tw/api/filter</loc>
+    
+    <lastmod>2020-03-03T19:07:10.244Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/zh-tw/api/generator</loc>
     
     <lastmod>2020-03-03T19:07:10.244Z</lastmod>
     
@@ -401,13 +401,6 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/docs/internationalization</loc>
-    
-    <lastmod>2020-03-03T19:07:10.242Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/zh-cn/docs/migration</loc>
     
     <lastmod>2020-03-03T19:07:10.242Z</lastmod>
@@ -415,14 +408,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/docs/plugins</loc>
-    
-    <lastmod>2020-03-03T19:07:10.242Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/zh-cn/docs/permalinks</loc>
+    <loc>https://scikit-ika.github.io/zh-cn/docs/internationalization</loc>
     
     <lastmod>2020-03-03T19:07:10.242Z</lastmod>
     
@@ -443,6 +429,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/zh-cn/docs/permalinks</loc>
+    
+    <lastmod>2020-03-03T19:07:10.242Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/zh-cn/docs/setup</loc>
     
     <lastmod>2020-03-03T19:07:10.242Z</lastmod>
@@ -450,14 +443,21 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/docs/contributing</loc>
+    <loc>https://scikit-ika.github.io/zh-cn/docs/plugins</loc>
+    
+    <lastmod>2020-03-03T19:07:10.242Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/zh-cn/docs/data-files</loc>
     
     <lastmod>2020-03-03T19:07:10.241Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/docs/data-files</loc>
+    <loc>https://scikit-ika.github.io/zh-cn/docs/contributing</loc>
     
     <lastmod>2020-03-03T19:07:10.241Z</lastmod>
     
@@ -471,7 +471,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/docs/github-pages</loc>
+    <loc>https://scikit-ika.github.io/zh-cn/docs/gitlab-pages</loc>
     
     <lastmod>2020-03-03T19:07:10.241Z</lastmod>
     
@@ -485,7 +485,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/docs/gitlab-pages</loc>
+    <loc>https://scikit-ika.github.io/zh-cn/docs/github-pages</loc>
     
     <lastmod>2020-03-03T19:07:10.241Z</lastmod>
     
@@ -541,6 +541,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/zh-cn/api/processor</loc>
+    
+    <lastmod>2020-03-03T19:07:10.239Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/zh-cn/api/locals</loc>
     
     <lastmod>2020-03-03T19:07:10.239Z</lastmod>
@@ -555,14 +562,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/api/processor</loc>
-    
-    <lastmod>2020-03-03T19:07:10.239Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/zh-cn/api/rendering</loc>
+    <loc>https://scikit-ika.github.io/zh-cn/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:10.239Z</lastmod>
     
@@ -576,7 +576,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/zh-cn/api/posts</loc>
+    <loc>https://scikit-ika.github.io/zh-cn/api/rendering</loc>
     
     <lastmod>2020-03-03T19:07:10.239Z</lastmod>
     
@@ -597,6 +597,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/zh-cn/api/console</loc>
+    
+    <lastmod>2020-03-03T19:07:10.238Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/zh-cn/api/box</loc>
     
     <lastmod>2020-03-03T19:07:10.238Z</lastmod>
@@ -605,13 +612,6 @@
   
   <url>
     <loc>https://scikit-ika.github.io/zh-cn/api/deployer</loc>
-    
-    <lastmod>2020-03-03T19:07:10.238Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/zh-cn/api/console</loc>
     
     <lastmod>2020-03-03T19:07:10.238Z</lastmod>
     
@@ -646,14 +646,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/themes/</loc>
+    <loc>https://scikit-ika.github.io/th/</loc>
     
     <lastmod>2020-03-03T19:07:10.001Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/th/</loc>
+    <loc>https://scikit-ika.github.io/themes/</loc>
     
     <lastmod>2020-03-03T19:07:10.001Z</lastmod>
     
@@ -807,14 +807,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/th/docs/asset-folders</loc>
+    <loc>https://scikit-ika.github.io/th/docs/commands</loc>
     
     <lastmod>2020-03-03T19:07:09.998Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/th/docs/commands</loc>
+    <loc>https://scikit-ika.github.io/th/docs/asset-folders</loc>
     
     <lastmod>2020-03-03T19:07:09.998Z</lastmod>
     
@@ -828,14 +828,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/th/docs/data-files</loc>
+    <loc>https://scikit-ika.github.io/th/docs/configuration</loc>
     
     <lastmod>2020-03-03T19:07:09.998Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/th/docs/configuration</loc>
+    <loc>https://scikit-ika.github.io/th/docs/data-files</loc>
     
     <lastmod>2020-03-03T19:07:09.998Z</lastmod>
     
@@ -856,6 +856,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/th/api/locals</loc>
+    
+    <lastmod>2020-03-03T19:07:09.997Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/th/api/</loc>
     
     <lastmod>2020-03-03T19:07:09.997Z</lastmod>
@@ -863,7 +870,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/th/api/locals</loc>
+    <loc>https://scikit-ika.github.io/th/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:09.997Z</lastmod>
     
@@ -878,13 +885,6 @@
   
   <url>
     <loc>https://scikit-ika.github.io/th/api/processor</loc>
-    
-    <lastmod>2020-03-03T19:07:09.997Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/th/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:09.997Z</lastmod>
     
@@ -926,13 +926,6 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/th/api/events</loc>
-    
-    <lastmod>2020-03-03T19:07:09.996Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/th/api/console</loc>
     
     <lastmod>2020-03-03T19:07:09.996Z</lastmod>
@@ -941,6 +934,13 @@
   
   <url>
     <loc>https://scikit-ika.github.io/th/api/deployer</loc>
+    
+    <lastmod>2020-03-03T19:07:09.996Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/th/api/events</loc>
     
     <lastmod>2020-03-03T19:07:09.996Z</lastmod>
     
@@ -968,14 +968,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/tag-plugins</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/templates</loc>
     
     <lastmod>2020-03-03T19:07:09.995Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/templates</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/tag-plugins</loc>
     
     <lastmod>2020-03-03T19:07:09.995Z</lastmod>
     
@@ -1024,14 +1024,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/permalinks</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/one-command-deployment</loc>
     
     <lastmod>2020-03-03T19:07:09.994Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/one-command-deployment</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/permalinks</loc>
     
     <lastmod>2020-03-03T19:07:09.994Z</lastmod>
     
@@ -1052,14 +1052,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/data-files</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/front-matter</loc>
     
     <lastmod>2020-03-03T19:07:09.993Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/front-matter</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/data-files</loc>
     
     <lastmod>2020-03-03T19:07:09.993Z</lastmod>
     
@@ -1129,14 +1129,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/configuration</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/commands</loc>
     
     <lastmod>2020-03-03T19:07:09.992Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/docs/commands</loc>
+    <loc>https://scikit-ika.github.io/ru/docs/configuration</loc>
     
     <lastmod>2020-03-03T19:07:09.992Z</lastmod>
     
@@ -1164,6 +1164,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/ru/api/processor</loc>
+    
+    <lastmod>2020-03-03T19:07:09.991Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/ru/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:09.991Z</lastmod>
@@ -1171,7 +1178,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ru/api/processor</loc>
+    <loc>https://scikit-ika.github.io/ru/api/router</loc>
     
     <lastmod>2020-03-03T19:07:09.991Z</lastmod>
     
@@ -1186,13 +1193,6 @@
   
   <url>
     <loc>https://scikit-ika.github.io/ru/api/rendering</loc>
-    
-    <lastmod>2020-03-03T19:07:09.991Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ru/api/router</loc>
     
     <lastmod>2020-03-03T19:07:09.991Z</lastmod>
     
@@ -1220,6 +1220,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/ru/api/</loc>
+    
+    <lastmod>2020-03-03T19:07:09.990Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/ru/api/generator</loc>
     
     <lastmod>2020-03-03T19:07:09.990Z</lastmod>
@@ -1228,13 +1235,6 @@
   
   <url>
     <loc>https://scikit-ika.github.io/ru/api/helper</loc>
-    
-    <lastmod>2020-03-03T19:07:09.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ru/api/</loc>
     
     <lastmod>2020-03-03T19:07:09.990Z</lastmod>
     
@@ -1255,21 +1255,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/variables</loc>
-    
-    <lastmod>2020-03-03T19:07:09.989Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/pt-br/docs/writing</loc>
-    
-    <lastmod>2020-03-03T19:07:09.989Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ru/api/console</loc>
     
     <lastmod>2020-03-03T19:07:09.989Z</lastmod>
     
@@ -1283,14 +1269,28 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/permalinks</loc>
+    <loc>https://scikit-ika.github.io/pt-br/docs/variables</loc>
+    
+    <lastmod>2020-03-03T19:07:09.989Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/ru/api/console</loc>
+    
+    <lastmod>2020-03-03T19:07:09.989Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/pt-br/docs/plugins</loc>
     
     <lastmod>2020-03-03T19:07:09.988Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/plugins</loc>
+    <loc>https://scikit-ika.github.io/pt-br/docs/permalinks</loc>
     
     <lastmod>2020-03-03T19:07:09.988Z</lastmod>
     
@@ -1304,14 +1304,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/setup</loc>
+    <loc>https://scikit-ika.github.io/pt-br/docs/themes</loc>
     
     <lastmod>2020-03-03T19:07:09.988Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/tag-plugins</loc>
+    <loc>https://scikit-ika.github.io/pt-br/docs/setup</loc>
     
     <lastmod>2020-03-03T19:07:09.988Z</lastmod>
     
@@ -1325,7 +1325,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/themes</loc>
+    <loc>https://scikit-ika.github.io/pt-br/docs/tag-plugins</loc>
     
     <lastmod>2020-03-03T19:07:09.988Z</lastmod>
     
@@ -1374,14 +1374,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/asset-folders</loc>
+    <loc>https://scikit-ika.github.io/pt-br/docs/commands</loc>
     
     <lastmod>2020-03-03T19:07:09.986Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/commands</loc>
+    <loc>https://scikit-ika.github.io/pt-br/docs/asset-folders</loc>
     
     <lastmod>2020-03-03T19:07:09.986Z</lastmod>
     
@@ -1396,6 +1396,13 @@
   
   <url>
     <loc>https://scikit-ika.github.io/pt-br/docs/data-files</loc>
+    
+    <lastmod>2020-03-03T19:07:09.986Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/pt-br/docs/front-matter</loc>
     
     <lastmod>2020-03-03T19:07:09.986Z</lastmod>
     
@@ -1423,21 +1430,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/docs/front-matter</loc>
-    
-    <lastmod>2020-03-03T19:07:09.986Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/pt-br/api/renderer</loc>
-    
-    <lastmod>2020-03-03T19:07:09.985Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/rendering</loc>
     
     <lastmod>2020-03-03T19:07:09.985Z</lastmod>
     
@@ -1451,7 +1444,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/themes</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/tag</loc>
     
     <lastmod>2020-03-03T19:07:09.985Z</lastmod>
     
@@ -1465,16 +1458,16 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/tag</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/rendering</loc>
     
     <lastmod>2020-03-03T19:07:09.985Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/themes</loc>
     
-    <lastmod>2020-03-03T19:07:09.984Z</lastmod>
+    <lastmod>2020-03-03T19:07:09.985Z</lastmod>
     
   </url>
   
@@ -1486,7 +1479,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/migrator</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/</loc>
     
     <lastmod>2020-03-03T19:07:09.984Z</lastmod>
     
@@ -1500,14 +1493,21 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/posts</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/processor</loc>
     
     <lastmod>2020-03-03T19:07:09.984Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/processor</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/migrator</loc>
+    
+    <lastmod>2020-03-03T19:07:09.984Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/pt-br/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:09.984Z</lastmod>
     
@@ -1535,13 +1535,6 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/events</loc>
-    
-    <lastmod>2020-03-03T19:07:09.983Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/pt-br/api/deployer</loc>
     
     <lastmod>2020-03-03T19:07:09.983Z</lastmod>
@@ -1549,14 +1542,21 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/generator</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/filter</loc>
     
     <lastmod>2020-03-03T19:07:09.983Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/pt-br/api/filter</loc>
+    <loc>https://scikit-ika.github.io/pt-br/api/events</loc>
+    
+    <lastmod>2020-03-03T19:07:09.983Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/pt-br/api/generator</loc>
     
     <lastmod>2020-03-03T19:07:09.983Z</lastmod>
     
@@ -1591,6 +1591,13 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/ko/docs/server</loc>
+    
+    <lastmod>2020-03-03T19:07:09.981Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/ko/docs/permalinks</loc>
     
     <lastmod>2020-03-03T19:07:09.981Z</lastmod>
@@ -1599,13 +1606,6 @@
   
   <url>
     <loc>https://scikit-ika.github.io/ko/docs/plugins</loc>
-    
-    <lastmod>2020-03-03T19:07:09.981Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ko/docs/server</loc>
     
     <lastmod>2020-03-03T19:07:09.981Z</lastmod>
     
@@ -1640,13 +1640,6 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/docs/internationalization</loc>
-    
-    <lastmod>2020-03-03T19:07:09.980Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/ko/docs/</loc>
     
     <lastmod>2020-03-03T19:07:09.980Z</lastmod>
@@ -1654,7 +1647,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/docs/migration</loc>
+    <loc>https://scikit-ika.github.io/ko/docs/internationalization</loc>
     
     <lastmod>2020-03-03T19:07:09.980Z</lastmod>
     
@@ -1668,16 +1661,16 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/docs/helpers</loc>
+    <loc>https://scikit-ika.github.io/ko/docs/migration</loc>
     
     <lastmod>2020-03-03T19:07:09.980Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/docs/data-files</loc>
+    <loc>https://scikit-ika.github.io/ko/docs/helpers</loc>
     
-    <lastmod>2020-03-03T19:07:09.979Z</lastmod>
+    <lastmod>2020-03-03T19:07:09.980Z</lastmod>
     
   </url>
   
@@ -1696,7 +1689,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/docs/generating</loc>
+    <loc>https://scikit-ika.github.io/ko/docs/data-files</loc>
     
     <lastmod>2020-03-03T19:07:09.979Z</lastmod>
     
@@ -1704,6 +1697,13 @@
   
   <url>
     <loc>https://scikit-ika.github.io/ko/docs/github-pages</loc>
+    
+    <lastmod>2020-03-03T19:07:09.979Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/ko/docs/generating</loc>
     
     <lastmod>2020-03-03T19:07:09.979Z</lastmod>
     
@@ -1731,14 +1731,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/docs/asset-folders</loc>
+    <loc>https://scikit-ika.github.io/ko/docs/commands</loc>
     
     <lastmod>2020-03-03T19:07:09.978Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/docs/commands</loc>
+    <loc>https://scikit-ika.github.io/ko/docs/asset-folders</loc>
     
     <lastmod>2020-03-03T19:07:09.978Z</lastmod>
     
@@ -1759,14 +1759,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/api/migrator</loc>
+    <loc>https://scikit-ika.github.io/ko/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:09.977Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/api/renderer</loc>
+    <loc>https://scikit-ika.github.io/ko/api/migrator</loc>
     
     <lastmod>2020-03-03T19:07:09.977Z</lastmod>
     
@@ -1780,21 +1780,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/api/posts</loc>
-    
-    <lastmod>2020-03-03T19:07:09.977Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ko/api/router</loc>
-    
-    <lastmod>2020-03-03T19:07:09.977Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ko/api/scaffolds</loc>
+    <loc>https://scikit-ika.github.io/ko/api/renderer</loc>
     
     <lastmod>2020-03-03T19:07:09.977Z</lastmod>
     
@@ -1808,28 +1794,21 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/api/events</loc>
+    <loc>https://scikit-ika.github.io/ko/api/scaffolds</loc>
     
-    <lastmod>2020-03-03T19:07:09.976Z</lastmod>
+    <lastmod>2020-03-03T19:07:09.977Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/ko/api/filter</loc>
+    <loc>https://scikit-ika.github.io/ko/api/router</loc>
     
-    <lastmod>2020-03-03T19:07:09.976Z</lastmod>
+    <lastmod>2020-03-03T19:07:09.977Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://scikit-ika.github.io/ko/api/helper</loc>
-    
-    <lastmod>2020-03-03T19:07:09.976Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ko/api/</loc>
     
     <lastmod>2020-03-03T19:07:09.976Z</lastmod>
     
@@ -1843,6 +1822,34 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/ko/api/filter</loc>
+    
+    <lastmod>2020-03-03T19:07:09.976Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/ko/api/events</loc>
+    
+    <lastmod>2020-03-03T19:07:09.976Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/ko/api/</loc>
+    
+    <lastmod>2020-03-03T19:07:09.976Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/docs/variables</loc>
+    
+    <lastmod>2020-03-03T19:07:09.975Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/docs/writing</loc>
     
     <lastmod>2020-03-03T19:07:09.975Z</lastmod>
@@ -1850,7 +1857,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/docs/variables</loc>
+    <loc>https://scikit-ika.github.io/ko/api/console</loc>
     
     <lastmod>2020-03-03T19:07:09.975Z</lastmod>
     
@@ -1865,13 +1872,6 @@
   
   <url>
     <loc>https://scikit-ika.github.io/ko/api/deployer</loc>
-    
-    <lastmod>2020-03-03T19:07:09.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/ko/api/console</loc>
     
     <lastmod>2020-03-03T19:07:09.975Z</lastmod>
     
@@ -1906,14 +1906,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/docs/migration</loc>
+    <loc>https://scikit-ika.github.io/docs/server</loc>
     
     <lastmod>2020-03-03T19:07:09.973Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/docs/one-command-deployment</loc>
+    <loc>https://scikit-ika.github.io/docs/migration</loc>
     
     <lastmod>2020-03-03T19:07:09.973Z</lastmod>
     
@@ -1927,7 +1927,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/docs/setup</loc>
+    <loc>https://scikit-ika.github.io/docs/one-command-deployment</loc>
     
     <lastmod>2020-03-03T19:07:09.973Z</lastmod>
     
@@ -1941,7 +1941,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/docs/server</loc>
+    <loc>https://scikit-ika.github.io/docs/setup</loc>
     
     <lastmod>2020-03-03T19:07:09.973Z</lastmod>
     
@@ -1990,14 +1990,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/docs/asset-folders</loc>
+    <loc>https://scikit-ika.github.io/docs/contributing</loc>
     
     <lastmod>2020-03-03T19:07:09.971Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/docs/contributing</loc>
+    <loc>https://scikit-ika.github.io/docs/asset-folders</loc>
     
     <lastmod>2020-03-03T19:07:09.971Z</lastmod>
     
@@ -2032,21 +2032,14 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/api/rendering</loc>
-    
-    <lastmod>2020-03-03T19:07:09.970Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/api/scaffolds</loc>
-    
-    <lastmod>2020-03-03T19:07:09.970Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/api/router</loc>
+    
+    <lastmod>2020-03-03T19:07:09.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/api/rendering</loc>
     
     <lastmod>2020-03-03T19:07:09.970Z</lastmod>
     
@@ -2067,9 +2060,9 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/api/generator</loc>
+    <loc>https://scikit-ika.github.io/api/scaffolds</loc>
     
-    <lastmod>2020-03-03T19:07:09.969Z</lastmod>
+    <lastmod>2020-03-03T19:07:09.970Z</lastmod>
     
   </url>
   
@@ -2081,7 +2074,21 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/api/generator</loc>
+    
+    <lastmod>2020-03-03T19:07:09.969Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/api/</loc>
+    
+    <lastmod>2020-03-03T19:07:09.969Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/api/posts</loc>
     
     <lastmod>2020-03-03T19:07:09.969Z</lastmod>
     
@@ -2109,13 +2116,6 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/api/posts</loc>
-    
-    <lastmod>2020-03-03T19:07:09.969Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/api/renderer</loc>
     
     <lastmod>2020-03-03T19:07:09.969Z</lastmod>
@@ -2123,21 +2123,7 @@
   </url>
   
   <url>
-    <loc>https://scikit-ika.github.io/api/box</loc>
-    
-    <lastmod>2020-03-03T19:07:09.968Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://scikit-ika.github.io/api/console</loc>
-    
-    <lastmod>2020-03-03T19:07:09.968Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://scikit-ika.github.io/api/deployer</loc>
     
     <lastmod>2020-03-03T19:07:09.968Z</lastmod>
     
@@ -2151,7 +2137,21 @@
   </url>
   
   <url>
+    <loc>https://scikit-ika.github.io/api/box</loc>
+    
+    <lastmod>2020-03-03T19:07:09.968Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://scikit-ika.github.io/api/filter</loc>
+    
+    <lastmod>2020-03-03T19:07:09.968Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://scikit-ika.github.io/api/deployer</loc>
     
     <lastmod>2020-03-03T19:07:09.968Z</lastmod>
     

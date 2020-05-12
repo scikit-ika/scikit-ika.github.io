@@ -1,14 +1,468 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
-{{ partial('partial/head') }}
+<html lang="th">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Deployment | scikit-ika</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://scikit-ika.github.io/th/docs/one-command-deployment.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://scikit-ika.github.io/th/docs/one-command-deployment">
+    
+      <link rel="alternative" hreflang="zh-tw" href="https://scikit-ika.github.io/zh-tw/th/docs/one-command-deployment">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://scikit-ika.github.io/zh-cn/th/docs/one-command-deployment">
+    
+      <link rel="alternative" hreflang="ru" href="https://scikit-ika.github.io/ru/th/docs/one-command-deployment">
+    
+      <link rel="alternative" hreflang="ko" href="https://scikit-ika.github.io/ko/th/docs/one-command-deployment">
+    
+      <link rel="alternative" hreflang="pt-br" href="https://scikit-ika.github.io/pt-br/th/docs/one-command-deployment">
+    
+      <link rel="alternative" hreflang="th" href="https://scikit-ika.github.io/th/th/docs/one-command-deployment">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-lato@0.0.75/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="scikit-ika" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="hexo สนับสนุนวิธีรวดเร็วและเรียบง่ายสำหรับ deployment คุณ deployเว็บไซต์ของคุณไปถึงเซร์ฟเวอร์ได้ด้วยคำสั่งบรรทัดเดียว $ hexo deploy  ก่อน deployment ครั้งแรกของคุณ คุณต้องการแก้ไขการตั้งค่าบางอย่างใน">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Deployment">
+<meta property="og:url" content="https://scikit-ika.github.io/th/docs/one-command-deployment">
+<meta property="og:site_name" content="scikit-ika">
+<meta property="og:description" content="hexo สนับสนุนวิธีรวดเร็วและเรียบง่ายสำหรับ deployment คุณ deployเว็บไซต์ของคุณไปถึงเซร์ฟเวอร์ได้ด้วยคำสั่งบรรทัดเดียว $ hexo deploy  ก่อน deployment ครั้งแรกของคุณ คุณต้องการแก้ไขการตั้งค่าบางอย่างใน">
+<meta property="og:locale" content="th_TH">
+<meta property="article:published_time" content="2020-03-03T19:07:09.999Z">
+<meta property="article:modified_time" content="2020-03-03T19:07:09.999Z">
+<meta property="article:author" content="Team scikit-ika">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="scikit-ika">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48498357-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6482217598104186",
+          enable_page_level_ads: true
+     });
+  </script>
+</head>
+
 <body>
   <div id="container">
-    {{ partial('partial/header') }}
-    {{ body }}
-    {{ partial('partial/footer') }}
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/th/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/th/scikit-ika/" class="main-nav-link">Docs</a><a href="/news/" class="main-nav-link">ข่าวสาร</a><a href="/about/" class="main-nav-link">About</a>
+      <a target="_blank" href="https://github.com/scikit-ika/scikit-ika" rel="external nofollow noreferrer noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Deployment</h1>
+                <a target="_blank" href="https://github.com/scikit-ika/scikit-ika.github.io/edit/master/source/th/docs/one-command-deployment.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>hexo สนับสนุนวิธีรวดเร็วและเรียบง่ายสำหรับ deployment คุณ deploy<br>เว็บไซต์ของคุณไปถึงเซร์ฟเวอร์ได้ด้วยคำสั่งบรรทัดเดียว</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>ก่อน deployment ครั้งแรกของคุณ คุณต้องการแก้ไขการตั้งค่าบางอย่างใน <code>_config
+.yml</code>  การตั้งค่า deployment ท่ีเกิดผลได้ต้องมี field ท่ีเป็น <code>type</code><br>ยกตัวอย่างเช่น:</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br></pre></td></tr></table></figure>
+
+<p>คุณยังเลื่อก deployer ได้หลายตัว hexo จะ execute deployer ทุกตัวตามลำดับ</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span></span><br></pre></td></tr></table></figure>
+
+<p>Refer to the <a target="_blank" href="https://hexo.io/plugins/" rel="external nofollow noreferrer noopener">Plugins</a> list for more deployment plugins.</p>
+<h2 id="Git" class="article-heading"><a href="#Git" class="headerlink" title="Git"></a>Git<a class="article-anchor" href="#Git" aria-hidden="true"></a></h2><ol>
+<li>Install <a target="_blank" href="https://github.com/hexojs/hexo-deployer-git" rel="external nofollow noreferrer noopener">hexo-deployer-git</a>.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Edit <strong>_config.yml</strong> (with example values shown below as comments):</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment">#https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">[branch]</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>repo</code></td>
+<td>URL of the target repository</td>
+<td></td>
+</tr>
+<tr>
+<td><code>branch</code></td>
+<td>Branch name.</td>
+<td><code>gh-pages</code> (GitHub)<br><code>coding-pages</code> (Coding.net)<br><code>master</code> (others)</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Customize commit message.</td>
+<td><code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code></td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td>Optional token value to authenticate with the repo. Prefix with <code>$</code> to read token from environment variable</td>
+<td></td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>Deploy your site <code>hexo clean &amp;&amp; hexo deploy</code>.<ul>
+<li>You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.</li>
+<li>hexo-deployer-git does not store your username and password. Use <a target="_blank" href="https://git-scm.com/docs/git-credential-cache" rel="external nofollow noreferrer noopener">git-credential-cache</a> to store them temporarily.</li>
+</ul>
+</li>
+<li>Navigate to your repository settings and change the “Pages” branch to <code>gh-pages</code> (or the branch specified in your config). The deployed site should be live on the link shown on the “Pages” setting.</li>
+</ol>
+<h2 id="Heroku" class="article-heading"><a href="#Heroku" class="headerlink" title="Heroku"></a>Heroku<a class="article-anchor" href="#Heroku" aria-hidden="true"></a></h2><p>ติดตั้ง <a target="_blank" href="https://github.com/hexojs/hexo-deployer-heroku" rel="external nofollow noreferrer noopener">hexo-deployer-heroku</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-heroku --save</span><br></pre></td></tr></table></figure>
+
+<p>แก้ไขการตั้งค่า</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>repo</code>, <code>repository</code></td>
+<td>Heroku repository URL</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Customize commit message (Default to <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody></table>
+<h2 id="Netlify" class="article-heading"><a href="#Netlify" class="headerlink" title="Netlify"></a>Netlify<a class="article-anchor" href="#Netlify" aria-hidden="true"></a></h2><p><a target="_blank" href="https://www.netlify.com/" rel="external nofollow noreferrer noopener">Netlify</a> สนับสนุน deployment ต่อเนื่องกัน<br>(ซึ้งสร้างด้วย git) สนับสนุน CDN แบบทั่วโลก DNS ทุกอย่าง（รวม domain<br>ท่ีตั้งค่าด้วยตนด้วย）HTTPS ท่ีควบคุมโดยขบวนการอัตโนมัติ<br>การเพิ่มความเร็วของวัตถุดิบ และสิ่งอื่นๆอีกมากมาย Netlify<br>เป็นแพลตฟอร์มซึ่งรวมทุกอย่างเป็นหนึ่งเดียว<br>ทำให้การสร้างไซต์หรือแอปของแว็บท่ีมีแระสิทธิภาพและรักษาได้ง่ายนั้นเป็นขบวนการอัตโนมัติ</p>
+<p> มีทั้งหมดสองวิธีในเรื่อง deploy เว็บไซต์ของตน  วิธีทั่วไปท่ีสุดคือการใช้ web<br>  UI คุณสามารถไปท่ี <a target="_blank" href="https://app.netlify.com/start" rel="external nofollow noreferrer noopener">create a new site page</a> และเลือก repo ของ project คุณจาก Github Gitlab หรือ Bitbucket และทำตามวิธีการใช้</p>
+<p>วิธีท่ีสองคือ การใช้เครื่องมือ <a target="_blank" href="https://www.netlify.com/docs/cli/" rel="external nofollow noreferrer noopener">Node based CLI</a> ของ Netlify เพื่อบริหารและ deploy ไซต์บน Netlify<br>โดยไม่ต้องผ่าน terminal</p>
+<p>คุณสามารถเพิ่ม <a target="_blank" href="https://www.netlify.com/docs/deploy-button/" rel="external nofollow noreferrer noopener">Deploy to Netlify Button</a> ไปถึงไฟล์ README ของคุณ ดังนั้นจะอนุญาตให้คนอื่น<br>copy respository ของคุณและ deploy ไปถึง Netlify ด้วยคลิกเดียว</p>
+<h2 id="Rsync" class="article-heading"><a href="#Rsync" class="headerlink" title="Rsync"></a>Rsync<a class="article-anchor" href="#Rsync" aria-hidden="true"></a></h2><p>ติดตั้ง <a target="_blank" href="https://github.com/hexojs/hexo-deployer-rsync" rel="external nofollow noreferrer noopener">hexo-deployer-rsync</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-rsync --save</span><br></pre></td></tr></table></figure>
+
+<p>แก้ไขการตั้งค่า</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">delete:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>host</code></td>
+<td>Address of remote host</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>Username</td>
+<td></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>Root directory of remote host</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td>22</td>
+</tr>
+<tr>
+<td><code>delete</code></td>
+<td>Delete old files on remote host</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Display verbose messages</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>ignore_errors</code></td>
+<td>Ignore errors</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<h2 id="OpenShift" class="article-heading"><a href="#OpenShift" class="headerlink" title="OpenShift"></a>OpenShift<a class="article-anchor" href="#OpenShift" aria-hidden="true"></a></h2><p>ติดตั้ง <a target="_blank" href="https://github.com/hexojs/hexo-deployer-openshift" rel="external nofollow noreferrer noopener">hexo-deployer-openshift</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-openshift --save</span><br></pre></td></tr></table></figure>
+
+<p>แก้ไขการตั้งค่า</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">openshift</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>repo</code></td>
+<td>OpenShift repository URL</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Customize commit message (Default to <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody></table>
+<h2 id="FTPSync" class="article-heading"><a href="#FTPSync" class="headerlink" title="FTPSync"></a>FTPSync<a class="article-anchor" href="#FTPSync" aria-hidden="true"></a></h2><p>ติดตั้ง <a target="_blank" href="https://github.com/hexojs/hexo-deployer-ftpsync" rel="external nofollow noreferrer noopener">hexo-deployer-ftpsync</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-ftpsync --save</span><br></pre></td></tr></table></figure>
+
+<p>แก้ไขการตั้งค่า</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">ftpsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remote:</span> <span class="string">[remote]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">ignore:</span> <span class="string">[ignore]</span></span><br><span class="line">  <span class="attr">connections:</span> <span class="string">[connections]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>host</code></td>
+<td>Address of remote host</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>Username</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>Password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>remote</code></td>
+<td>Root directory of remote host</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td>21</td>
+</tr>
+<tr>
+<td><code>ignore</code></td>
+<td>Ignore the files on either host or remote</td>
+<td></td>
+</tr>
+<tr>
+<td><code>connections</code></td>
+<td>Connections number</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Display verbose messages</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<h2 id="SFTP" class="article-heading"><a href="#SFTP" class="headerlink" title="SFTP"></a>SFTP<a class="article-anchor" href="#SFTP" aria-hidden="true"></a></h2><p>ติดตั้ง [hexo-deployer-sftp]. deploy ไซต์ได้โดย SFTP และใช้ password ได้ด้วย ssh-agent</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-sftp --save</span><br></pre></td></tr></table></figure>
+
+<p>แก้ไขการตั้งค่า</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">sftp</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remotePath:</span> <span class="string">[remote</span> <span class="string">path]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">privateKey:</span> <span class="string">[path/to/privateKey]</span></span><br><span class="line">  <span class="attr">passphrase:</span> <span class="string">[passphrase]</span></span><br><span class="line">  <span class="attr">agent:</span> <span class="string">[path/to/agent/socket]</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>host</code></td>
+<td>Address of remote host</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>Username</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>Password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>remotePath</code></td>
+<td>Root directory of remote host</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td>22</td>
+</tr>
+<tr>
+<td><code>privateKey</code></td>
+<td>Path to a ssh private key</td>
+<td></td>
+</tr>
+<tr>
+<td><code>passphrase</code></td>
+<td>Optional passphrase for the private key</td>
+<td></td>
+</tr>
+<tr>
+<td><code>agent</code></td>
+<td>Path to the ssh-agent socket</td>
+<td><code>$SSH_AUTH_SOCK</code></td>
+</tr>
+</tbody></table>
+<h2 id="Other-Methods" class="article-heading"><a href="#Other-Methods" class="headerlink" title="Other Methods"></a>Other Methods<a class="article-anchor" href="#Other-Methods" aria-hidden="true"></a></h2><p>ไฟล์ท่ีต้องการ generate จะบันทึกอยู่ใน folder <code>public</code> คุณสามารถ copy<br>ไลฟ์เหล่านี้ไปถึงท่ีท่ีคุณอยากย้ายไป</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2020-03-03T19:07:09.999Z" itemprop="dateModified">Last updated: 2020-03-03</time>
+                <a href="gitlab-pages.html" class="article-footer-prev" title="GitLab Pages"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="permalinks.html" class="article-footer-next" title="Permalinks"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-text">Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Heroku"><span class="toc-text">Heroku</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Netlify"><span class="toc-text">Netlify</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rsync"><span class="toc-text">Rsync</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenShift"><span class="toc-text">OpenShift</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FTPSync"><span class="toc-text">FTPSync</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SFTP"><span class="toc-text">SFTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-Methods"><span class="toc-text">Other Methods</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link">Migration</a><strong class="sidebar-title">Basic Usage</strong><a href="writing.html" class="sidebar-link">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><strong class="sidebar-title">Deployment</strong><a href="github-pages.html" class="sidebar-link">GitHub Pages</a><a href="gitlab-pages.html" class="sidebar-link">GitLab Pages</a><a href="one-command-deployment.html" class="sidebar-link current">One-Command Deployment</a><strong class="sidebar-title">Customization</strong><a href="permalinks.html" class="sidebar-link">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2020 <a href="https://github.com/scikit-ika/scikit-ika/graphs/contributors" rel="external nofollow noreferrer" target="_blank">Team scikit-ika</a><br>
+      Documentation licensed under <a href="https://github.com/scikit-ika/scikit-ika/blob/master/LICENSE" rel="external nofollow noreferrer" target="_blank">BSD 3-Clause</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://github.com/scikit-ika/scikit-ika" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
   </div>
   <div id="mobile-nav-dimmer"></div>
-  {{ partial('partial/mobile_nav') }}
-  {{ partial('partial/after_footer') }}
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/th/scikit-ika/" class="mobile-nav-link">Docs</a><a href="/news/" class="mobile-nav-link">ข่าวสาร</a><a href="/about/" class="mobile-nav-link">About</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/scikit-ika/scikit-ika" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">Getting Started</strong><a href="index.html" class="mobile-nav-link">Overview</a><a href="setup.html" class="mobile-nav-link">Setup</a><a href="configuration.html" class="mobile-nav-link">Configuration</a><a href="commands.html" class="mobile-nav-link">Commands</a><a href="migration.html" class="mobile-nav-link">Migration</a><strong class="mobile-nav-title">Basic Usage</strong><a href="writing.html" class="mobile-nav-link">Writing</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">Tag Plugins</a><a href="asset-folders.html" class="mobile-nav-link">Asset Folders</a><a href="data-files.html" class="mobile-nav-link">Data Files</a><a href="server.html" class="mobile-nav-link">Server</a><a href="generating.html" class="mobile-nav-link">Generating</a><strong class="mobile-nav-title">Deployment</strong><a href="github-pages.html" class="mobile-nav-link">GitHub Pages</a><a href="gitlab-pages.html" class="mobile-nav-link">GitLab Pages</a><a href="one-command-deployment.html" class="mobile-nav-link current">One-Command Deployment</a><strong class="mobile-nav-title">Customization</strong><a href="permalinks.html" class="mobile-nav-link">Permalinks</a><a href="themes.html" class="mobile-nav-link">Themes</a><a href="templates.html" class="mobile-nav-link">Templates</a><a href="variables.html" class="mobile-nav-link">Variables</a><a href="helpers.html" class="mobile-nav-link">Helpers</a><a href="internationalization.html" class="mobile-nav-link">Internationalization (i18n)</a><a href="plugins.html" class="mobile-nav-link">Plugins</a><strong class="mobile-nav-title">Miscellaneous</strong><a href="troubleshooting.html" class="mobile-nav-link">Troubleshooting</a><a href="contributing.html" class="mobile-nav-link">Contributing</a>
+    
+  </div>
+</nav>
+
+  <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
 </body>
 </html>
