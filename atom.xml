@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scikit-ika.github.io/"/>
-  <updated>2021-05-26T04:21:22.103Z</updated>
+  <updated>2021-05-30T22:12:18.615Z</updated>
   <id>https://scikit-ika.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Intergration of Nacre has started</title>
-    <link href="https://scikit-ika.github.io/news/2021/05/26/start-intergrating-nacre/"/>
-    <id>https://scikit-ika.github.io/news/2021/05/26/start-intergrating-nacre/</id>
+    <title>Integration of Nacre has started</title>
+    <link href="https://scikit-ika.github.io/news/2021/05/26/start-integrating-nacre/"/>
+    <id>https://scikit-ika.github.io/news/2021/05/26/start-integrating-nacre/</id>
     <published>2021-05-26T00:00:00.000Z</published>
-    <updated>2021-05-26T04:21:22.103Z</updated>
+    <updated>2021-05-30T22:12:18.615Z</updated>
     
     <summary type="html">
     
@@ -62,11 +62,11 @@
   </entry>
   
   <entry>
-    <title>Intergration of Auto Parameter Tuning has started</title>
-    <link href="https://scikit-ika.github.io/news/2020/04/01/start-intergrating-meta-learning/"/>
-    <id>https://scikit-ika.github.io/news/2020/04/01/start-intergrating-meta-learning/</id>
+    <title>Integration of Auto Parameter Tuning has started</title>
+    <link href="https://scikit-ika.github.io/news/2020/04/01/start-integrating-meta-learning/"/>
+    <id>https://scikit-ika.github.io/news/2020/04/01/start-integrating-meta-learning/</id>
     <published>2020-04-01T00:00:00.000Z</published>
-    <updated>2021-05-26T04:21:35.550Z</updated>
+    <updated>2021-05-30T22:11:48.256Z</updated>
     
     <summary type="html">
     
@@ -92,11 +92,11 @@
   </entry>
   
   <entry>
-    <title>PEARL is intergrated</title>
-    <link href="https://scikit-ika.github.io/news/2020/01/29/pearl-is-intergrated/"/>
-    <id>https://scikit-ika.github.io/news/2020/01/29/pearl-is-intergrated/</id>
+    <title>PEARL is integrated</title>
+    <link href="https://scikit-ika.github.io/news/2020/01/29/pearl-is-integrated/"/>
+    <id>https://scikit-ika.github.io/news/2020/01/29/pearl-is-integrated/</id>
     <published>2020-01-29T00:00:00.000Z</published>
-    <updated>2021-05-26T04:12:05.416Z</updated>
+    <updated>2021-05-30T22:12:47.480Z</updated>
     
     <summary type="html">
     
