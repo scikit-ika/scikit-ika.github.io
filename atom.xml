@@ -32,6 +32,36 @@
   </entry>
   
   <entry>
+    <title>The Model-Based Transfer Learning module (OPERA) is integrated</title>
+    <link href="https://scikit-ika.github.io/news/2022/03/01/opera/"/>
+    <id>https://scikit-ika.github.io/news/2022/03/01/opera/</id>
+    <published>2022-03-01T00:00:00.000Z</published>
+    <updated>2022-03-18T01:42:23.286Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The Instance-Based Transfer Learning module (AOTrAdaBoost) is integrated</title>
+    <link href="https://scikit-ika.github.io/news/2022/02/15/aotradaoost/"/>
+    <id>https://scikit-ika.github.io/news/2022/02/15/aotradaoost/</id>
+    <published>2022-02-15T00:00:00.000Z</published>
+    <updated>2022-03-18T01:42:44.078Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Nacre is integrated</title>
     <link href="https://scikit-ika.github.io/news/2021/05/26/start-integrating-nacre/"/>
     <id>https://scikit-ika.github.io/news/2021/05/26/start-integrating-nacre/</id>
@@ -62,41 +92,11 @@
   </entry>
   
   <entry>
-    <title>PEARL is presented in PAKDD 2020</title>
-    <link href="https://scikit-ika.github.io/news/2020/05/13/pakdd/"/>
-    <id>https://scikit-ika.github.io/news/2020/05/13/pakdd/</id>
-    <published>2020-05-13T00:00:00.000Z</published>
-    <updated>2020-05-12T08:38:10.774Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Integration of Auto Parameter Tuning has started</title>
+    <title>The Auto Parameter Tuning component is integrated</title>
     <link href="https://scikit-ika.github.io/news/2020/04/01/start-integrating-meta-learning/"/>
     <id>https://scikit-ika.github.io/news/2020/04/01/start-integrating-meta-learning/</id>
     <published>2020-04-01T00:00:00.000Z</published>
-    <updated>2020-05-12T08:35:59.817Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Happy birthday scikit-ika!</title>
-    <link href="https://scikit-ika.github.io/news/2020/03/01/happy-birthday-scikit-ika/"/>
-    <id>https://scikit-ika.github.io/news/2020/03/01/happy-birthday-scikit-ika/</id>
-    <published>2020-03-01T00:00:00.000Z</published>
-    <updated>2020-03-04T01:28:06.675Z</updated>
+    <updated>2022-03-18T01:39:12.245Z</updated>
     
     <summary type="html">
     
