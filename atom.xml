@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://scikit-ika.github.io/"/>
-  <updated>2022-03-14T10:03:12.348Z</updated>
+  <updated>2022-03-18T01:42:23.286Z</updated>
   <id>https://scikit-ika.github.io/</id>
   
   <author>
@@ -15,21 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>The transfer learnig module is integrated</title>
-    <link href="https://scikit-ika.github.io/news/2022/03/14/transfer-learning/"/>
-    <id>https://scikit-ika.github.io/news/2022/03/14/transfer-learning/</id>
-    <published>2022-03-14T00:00:00.000Z</published>
-    <updated>2022-03-14T10:03:12.348Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>The Model-Based Transfer Learning module (OPERA) is integrated</title>
